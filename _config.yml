@@ -1,3 +1,4 @@
-theme: jekyll-theme-midnight
+theme: jekyll-theme-minimal
 title: Ramialison Lab
 description: More info to come.
+gem "github-pages", group: :jekyll_plugins
