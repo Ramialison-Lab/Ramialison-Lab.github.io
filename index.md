@@ -1,9 +1,10 @@
-
-<div><img src="https://user-images.githubusercontent.com/79250095/192206702-40b2f24f-4df8-41b9-9ade-fbc9a5cd66d2.png" width="150" height="150" align="left"> <h1>Welcome to the Ramialison-Lab github page
+<head>
+  <div><img src="https://user-images.githubusercontent.com/79250095/192206702-40b2f24f-4df8-41b9-9ade-fbc9a5cd66d2.png" width="150" height="150" align="left">        <h1>Welcome to the Ramialison-Lab github page
   <h2>Transcriptomics & Bioinformatics 
-</div>
-  
+  </div>
+    </head>  
 <div>
+ <body>
   <h2></h2>
   <h2>Our Applications on GitHub:</h2>
   <ul>
@@ -17,3 +18,4 @@
     <li>[cNRE-Genomics-Analysis](https://github.com/Ramialison-Lab/cNRE-Genomics-Analysis)
   </ul>
 </div>
+  </body>
