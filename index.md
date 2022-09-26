@@ -4,7 +4,6 @@
   </div>
     </head>  
 <div>
- <body>
   <h2></h2>
   <h2>Our Applications on GitHub:</h2>
   <ul>
@@ -18,5 +17,4 @@
     <li><a href="https://github.com/Ramialison-Lab/EnhancerWorkflow">Enhancer Workflow</a>    
     <li><a href="https://github.com/Ramialison-Lab/cNRE-Genomics-Analysis">cNRE-Genomics-Analysis</a>
   </ul>
-</div>
-  </body>
+</body>
