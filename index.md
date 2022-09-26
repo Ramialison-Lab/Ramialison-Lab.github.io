@@ -8,14 +8,15 @@
   <h2></h2>
   <h2>Our Applications on GitHub:</h2>
   <ul>
-    <li>[VR-Omics](https://github.com/Ramialison-Lab/VR-Omics)
-    <li>[VR-Cardiomics](https://github.com/Ramialison-Lab/VR-Cardiomics) or [VR-Cardiomics for zSpace](https://github.com/Ramialison-Lab/VR-CardiomicsZSpace)
-    <li>[3D-Cardiomics](https://github.com/Ramialison-Lab/3DCardiomics)
-    <li>[MonaGO](https://github.com/Ramialison-Lab/MonaGo)
-    <li>[Trawler-2.0](https://github.com/Ramialison-Lab/Trawler-2.0)
-    <li>[Cardiac Network Component Predictor](https://github.com/Ramialison-Lab/CardiacNetworkComponentPredictor)
-    <li>[Enhancer Workflow](https://github.com/Ramialison-Lab/EnhancerWorkflow)
-    <li>[cNRE-Genomics-Analysis](https://github.com/Ramialison-Lab/cNRE-Genomics-Analysis)
+    <li><a href="https://github.com/Ramialison-Lab/VR-Omics">VR-Omics</a>
+    <li><a href="https://github.com/Ramialison-Lab/VR-Cardiomics">VR-Cardiomics</a>    
+    <li><a href="https://github.com/Ramialison-Lab/VR-CardiomicsZSpace">VR-Cardiomics for zSpace</a>
+    <li><a href="https://github.com/Ramialison-Lab/3DCardiomics">3D-Cardiomics</a>
+    <li><a href="https://github.com/Ramialison-Lab/MonaGo">MonaGo</a>
+    <li><a href="https://github.com/Ramialison-Lab/Trawler-2.0">Trawler-2.0</a>
+    <li><a href="https://github.com/Ramialison-Lab/CardiacNetworkComponentPredictor">Cardiac Network Component Predictor</a>
+    <li><a href="https://github.com/Ramialison-Lab/EnhancerWorkflow">Enhancer Workflow</a>    
+    <li><a href="https://github.com/Ramialison-Lab/cNRE-Genomics-Analysis">cNRE-Genomics-Analysis</a>
   </ul>
 </div>
   </body>
