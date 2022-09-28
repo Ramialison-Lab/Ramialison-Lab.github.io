@@ -11414,7 +11414,33 @@ textarea.form-control {
   position: relative;
   height: 100vh;
   min-height: 500px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.header .main{
+  position: relative;
+  width: 100%;
+  height:80%;
+  background: url(../imgs/logo_free.png) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.header .vrcardio{
+  position: relative;
+  width: 100%;
+  height:80%;
   background: url(../imgs/SinglePiece.png) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.header .monago{
+  position: relative;
+  width: 100%;
+  height:80%;
+  background: url(../imgs/monago2.png) no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
 }
@@ -11531,7 +11557,6 @@ textarea.form-control {
           justify-content: center;
   text-align: center;
   padding: 1rem;
-  background: url(../imgs/SinglePiece.png);
   background-size: cover;
   overflow: hidden;
 
@@ -11618,7 +11643,6 @@ textarea.form-control {
 
 .section.has-img-bg {
   position: relative;
-  background: url(../imgs/SinglePiece.png) no-repeat center top fixed;
   background-size: cover;
   color: #fff;
 }
