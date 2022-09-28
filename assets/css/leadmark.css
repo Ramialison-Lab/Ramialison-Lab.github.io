@@ -8769,6 +8769,10 @@ button.bg-dark:focus {
   width: 100% !important;
 }
 
+.w-150 {
+  width: 150% !important;
+}
+
 .w-auto {
   width: auto !important;
 }
@@ -11484,7 +11488,7 @@ textarea.form-control {
 .header.components-header {
   max-height: 450px !important;
   height: 450px;
-  dispaly: none;
+  display: none;
   background-position: center -140px;
 }
 
@@ -11499,10 +11503,10 @@ textarea.form-control {
 }
 
 .header-title {
-  font-size: 2.4rem;
+  font-size: 4rem;
   font-weight: bold;
   opacity: .8;
-  color: #444;
+  color: white;
 }
 
 .header-mini {
@@ -11527,7 +11531,10 @@ textarea.form-control {
           justify-content: center;
   text-align: center;
   padding: 1rem;
-  background: #ffbca8;
+  background: url(../imgs/SinglePiece.png);
+  background-size: cover;
+  overflow: hidden;
+
 }
 
 .section {
