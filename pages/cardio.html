@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Ramialison-Lab Software Website">
+    <meta name="author" content="Ramialison-Lab">
+    <title>Ramialison-Lab software WebsiteS</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+	<link rel="stylesheet" href="../assets/css/leadmark.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/imgs/logo_free.png" alt="">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://3d-cardiomics.erc.monash.edu.au/" class="ml-4 nav-link btn btn-primary btn-sm rounded">Try 3DCardiomics</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="https://github.com/Ramialison-Lab/3DCardiomics">GitHub code</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#abstract">Abstract</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#documentation">Documentation</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="cardio">
+            <div class="overlay">
+                <h1 class="subtitle">A spatial transcriptional atlas of the mammalian heart</h1>
+                <h1 class="title">3D-Cardiomics</h1>  
+            </div>
+            <div class="shape">
+                <svg viewBox="0 0 1500 200">
+                    <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+                </svg>
+            </div>  
+            <div class="mouse-icon"><div class="wheel"></div>
+        </div>
+    </header>
+    <!-- End Of Page Header -->
+    <section class="section" id="abstract">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
+                    <h6 class="section-title mb-0">Abstract</h6>
+                    <p>Understanding the spatial gene expression and regulation in the heart is key to uncovering its developmental and physiological processes, during homeostasis and disease. Numerous techniques exist to gain gene expression and regulation information in organs such as the heart, but few utilize intuitive true-to-life three-dimensional representations to analyze and visualise results. Here we combined transcriptomics with 3D-modelling to interrogate spatial gene expression in the mammalian heart. For this, we microdissected and sequenced transcriptome-wide 18 anatomical sections of the adult mouse heart. Our study has unveiled known and novel genes that display complex spatial expression in the heart sub-compartments. We have also created 3D-cardiomics, an interface for spatial transcriptome analysis and visualization that allows the easy exploration of these data in a 3D model of the heart. 3D-cardiomics is accessible <a href="http://3d-cardiomics.erc.monash.edu/">here</a> .</p>
+                    <a href="https://doi.org/10.1016/j.yjmcc.2021.09.011">Go to the Article</a>
+                </div>
+                <div class="col-md-6 pl-md-5">
+                    <div class="row">
+                       <div class="col-6">
+                        <img src="../assets/imgs/3d-cardiomics.PNG" alt="" class="w-150 shadow-sm">
+                    </div>
+                    </div>
+                </div>
+            </div>              
+        </div>
+    </section>
+
+<section class="section" id="documentation">
+   <div class="container">
+   <h1 id="3dcardiomcis">Documentation</h1>
+   <h1 id="3d-cardiomics">3D-Cardiomics</h1>
+<h2 id="a-visual-system-for-the-exploration-of-cardiac-transcriptome-data">A visual system for the exploration of cardiac transcriptome data</h2>
+<h3 id="overview">Overview</h3>
+<p>3D-Cardiomics provides a framework to map multi dimensional data (such as intensity and location of gene expression) on to 3D models in a heatmap-like manner. In our use case the intensity is the level of gene expression of those expressed in the adult heart, and the location is this expression level in 18 discrete pieces of the heart as measured by RNA-seq.</p>
+<p>VR-cardiomics for <a href="https://github.com/Ramialison-Lab/VR-Cardiomics">VR devices</a> such as Oculus Quest or Rift and for <a href="https://github.com/Ramialison-Lab/VR-CardiomicszSpace">zSpace</a> are available as well.</p>
+<h3 id="dependencies">Dependencies</h3>
+<ul>
+<li>Unity (we are using 2018.4.23.f1)</li>
+<li>Any modern web browser which is WebGL capable</li>
+</ul>
+<h3 id="-a-name-instructions-instructions-a-"><a name="instructions"> Instructions </a></h3>
+<p>Simply run unity and open the root folder of the project. If the heart scene is not visible, open it in unity by browsing to and double clicking the following file:</p>
+<pre><code>Assets/<span class="hljs-number">3</span>DCardiomics_main.unity
+</code></pre><h3 id="upload-expression-values">Upload expression values</h3>
+<p>3D-cardiomics supports to render user provided expression values on our 3D-cardiomics model on your local machine. Therefore, please follow the <strong><a href="#instructions">Instructions</a></strong> to run 3D-Cardiomics on your local machine.</p>
+<p>To expression values are stored in:</p>
+<pre><code>Assets<span class="hljs-regexp">/Ressources/</span>...
+</code></pre><p>You can simply add new files by navigating to the <strong>Ressources</strong> folder (blue box) and using left-click to choose <em>*Import New Asset...</em>. </p>
+<p><img src="https://user-images.githubusercontent.com/79250095/131953413-d93d5426-935f-4c87-8614-84ab0a24f410.png" height="600px" alt="NewAsset"></p>
+<p>Search the file to upload on your local computer and select it. To set this file as expression values click on the <strong>ScriptHolder</strong> Object (red box) on the left side.
+<img src="https://user-images.githubusercontent.com/79250095/131953566-875f65eb-f81a-4569-8d65-17b17dd7f238.png" height="600px" alt="SH"></p>
+<p>This will open the <strong>Inspector</strong> Tab on the right side. Enter the name of the file you just uploaded into the input field <strong>Csv Filename Base</strong> (red box). (Without file ending such as .txt or .csv).</p>
+<p><img src="https://user-images.githubusercontent.com/79250095/131953677-905716d8-6577-445b-bdf8-bf2eb1f6dcc5.png" height="600px" alt="fileName"></p>
+<p>If you run the application now by pressing the Start button, your expression values will be available to display onto the 3D model.</p>
+<p>Please keep in mind, that in order to use your expression values, the data has to be in a specific format. Currently supported are only CSV files, either in .csv or .txt format. 
+Each row has to begin with the item&#39;s name and its intensity in the 18 locations. A sample file (fake_mouse_expression_values) is provided with a few randomised values to demonstrate the functionality.</p>
+<p>The application only supports visualisation of raw data [A] for intensity if they are within a range from -3 to 20. The application will disable the raw view if values outside the boundaries are detected (Normalized expressions can still be viewed).</p>
+
+
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">Murdoch Children's Research Institute, Parkville, Melbourne</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">denis.bienroth@mcri.edu.au</p>
+                    <br>
+                    <h6 class="mb-0">Website</h6>
+                    <p class="mb-0"><a href="https://www.mcri.edu.au/research/research-areas/stem-cell-biology/transcriptomics-and-bioinformatics">MCRI website</a> </p>
+ 
+                    <p></p>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script></p>     
+            </footer>
+            <!-- End of Page Footer -->  
+        </div>
+    </section>
+	
+	<!-- core  -->
+    <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="../assets/vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- LeadMark js -->
+    <script src="../assets/js/leadmark.js"></script>
+
+</body>
+</html>

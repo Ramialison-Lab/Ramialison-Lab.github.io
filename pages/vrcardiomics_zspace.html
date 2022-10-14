@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Ramialison-Lab Software Website">
+    <meta name="author" content="Ramialison-Lab">
+    <title>Ramialison-Lab software WebsiteS</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+	<link rel="stylesheet" href="../assets/css/leadmark.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/imgs/logo_free.png" alt="">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="https://github.com/Ramialison-Lab/VR-CardiomicsZSpace">GitHub code</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#abstract">Abstract</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#documentation">Documentation</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="vrcardio_zspace">
+            <div class="overlay">
+               <h1 class="subtitle">Immersive Environment to Explore Spatial Gene Expression</h1>
+               <h1 class="title">VR-Cardiomics</h1>  
+            </div>
+            <div class="shape">
+               <svg viewBox="0 0 1500 200">
+                  <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+               </svg>
+            </div>  
+            <div class="mouse-icon"><div class="wheel"></div>
+         </div>
+    </header>
+    <!-- End Of Page Header -->
+
+    <!-- Inputs -->
+   <section class="section" id="abstract">
+      <div class="container">
+          <div class="row justify-content-between">
+              <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
+                  <h6 class="section-title mb-0">Abstract</h6>
+                  <p>Spatially resolved transcriptomics is an emerging class of high-throughput technologies that enable biologists to systematically investigate the expression of genes along with spatial information. Upon data acquisition, one major hurdle is the subsequent interpretation and visualization of the datasets acquired. To address this challenge, VR-Cardiomics is presented, which is a novel data visualization system with interactive functionalities designed to help biologists interpret spatially resolved transcriptomic datasets. By implementing the system in two separate immersive environments, fish tank virtual reality (FTVR) and head-mounted display virtual reality (HMD-VR), biologists can interact with the data in novel ways not previously possible, such as visually exploring the gene expression patterns of an organ, and comparing genes based on their 3D expression profiles. Further, a biologist-driven use-case is presented, in which immersive environments facilitate biologists to explore and compare the heart expression profiles of different genes.</p>
+                  <a href="https://doi.org/10.1186/s42492-021-00098-6">Go to the Article</a>
+               </div>
+              <div class="col-md-6 pl-md-5">
+                  <div class="row">
+                     <div class="col-6">
+                        <img src="../assets/imgs/cardiomics_bsp.png" alt="" class="w-150 shadow-sm">
+                    </div>
+                  </div>
+              </div>
+          </div>              
+      </div>
+  </section>
+    <section class="section" id="documentation">
+    <div class="container">
+            <h1 id="vrcardiomics">Documentation</h1>
+
+            <h2 id="overview">Overview</h2>
+            <h1 id="vr-cardiomics-zspace-">VR-Cardiomics (zSpace)</h1>
+            <h2 id="a-visual-system-for-the-exploration-of-cardiac-transcriptome-data">A visual system for the exploration of cardiac transcriptome data</h2>
+            <h3 id="overview">Overview</h3>
+            <p>VR-Cardiomics (zSpace) provides a framework to map multi-dimensional data (such as intensity and location of gene expression) onto 3D models in a heatmap-like manner. In our use case, the intensity is the level of gene expression of those expressed in the adult heart, and the location is this expression level in 18 discrete pieces of the heart as measured by RNA-seq.</p>
+            <p>Code for the manuscript: Denis Bienroth<sup>*</sup>, Hieu T. Nim, Dimitar Garkov, Karsten Klein, Sabrina Jaeger-Honz, Mirana Ramialison<sup>#</sup> and Falk Schreiber<sup>#</sup>. &quot;Spatially-Resolved Transcriptomics in ImmersiveEnvironments&quot; (<sup>*</sup>: first author; <sup>#</sup>: corresponding authors)</p>
+            <p>VR-Cardiomics (zSpace) is designed to map user-generated data onto a user-specific 3D model. However, the data and the model must meet certain requirements. Please refer to chapter <a href="#custom">Upload Custom Data</a> for more information on how to use VR-Cardiomics as a framework for your own data and models on your local machine.</p>
+            <p>This code only supports 2D monitor solutions and zSpace. <a href="https://github.com/Ramialison-Lab/VR-Cardiomics">VR application</a> and the <a href="https://github.com/Ramialison-Lab/3DCardiomics">Webapplication</a> are also available.</p>
+            <h2 id="navigate">Navigate</h2>
+            <ul>
+            <li><a href="#dependencies">Dependencies</a></li>
+            <li><a href="#runVR">How to run VR-Cardiomics</a></li>
+            <li><a href="#features">VR-Cardiomics Features</a></li>
+            <li><a href="#custom">Upload custom data</a></li>
+            <li><a href="#trouble">Troubleshooting</a></li>
+            </ul>
+            <h2 id="-a-name-dependencies-dependencies-a-"><a name="dependencies">Dependencies </a></h2>
+            <ul>
+            <li>Unity (2018.4.23f1)</li>
+            <li>zSpace Core plugin (<a href="#plugin">see below</a>) </li>
+            </ul>
+            <p>The application was tested and developed for zSpace AIO 200 solutions, other devices may not be fully supported.</p>
+            <h2 id="-a-name-runvr-how-to-run-vr-cardiomics-a-"><a name="runVR">How to run VR-Cardiomics </a></h2>
+            <p>The simplest way to run VR-Cardiomics is by using Unity <a href="https://unity3d.com/de/unity/whats-new/2019.4.19">2019.4.19f1</a>. Copy VR-Cardiomics from GitHub to your local machine (<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">how to copy from GitHub</a>) and open it in Unity (Information on how to open an existing project in Unity can be found <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GettingStartedOpeningProjects.html">here</a>).</p>
+            <p><em>It is recommended to ignore update notifications from Unity in order to ensure that the application is processed as expected.</em></p>
+            <p>Start Unity 2018.4.23.f1 or later on the folder structure of the gitHub Repo. Ensure that zSpace is installed and running. For further information on zSpace setup <a href="https://support.zspace.com/s/article/Setting-up-your-zSpace-Laptop-and-user-guide?language=en_US">klick here</a>. Please note EOL of zSpace devices. </p>
+            <p><a name="plugin">In order</a> to run the code on zSpace in Unity import zSpace plugin. For zSpace Plugin information for Unity to support main features please see <a href="https://developer.zspace.com/docs/unity3d-setup">here</a>. </p>
+            <h2 id="-a-name-features-vr-cardiomics-features-a-"><a name="features">VR-Cardiomics Features</a></h2>
+            <h3 id="-a-name-menu-the-menu-a-"><a name="menu">The menu </a></h3>
+            <p>The menu is always visible while using the application and s used to control all features of VR-Cardiomics.</p>
+            <img src="https://user-images.githubusercontent.com/79250095/135039690-3093bbd9-2813-49d9-8ac3-1a3b93e10bdb.png" width="800px" alt="zSpaceMenu">
+            <p>Menu explanations:</p>
+            <ol>
+            <li>Input Field for expression value</li>
+            <li>Explode function to expand the model</li>
+            <li>Reset function to reset all selections and the second object</li>
+            <li>Similar genes list where all similar expression patterns will be shown according to input in input field 1.</li>
+            <li>Export current similar genes list as CSV file</li>
+            <li>Piecewise Comparison / Group Selection</li>
+            <li>Show heatmap legend</li>
+            <li>Alternative colour palette for heat map if visual difficulties might appear</li>
+            <li>Toggle between normalised or absolute values</li>
+            <li>Autocompleted list of expression items according to current input</li>
+            </ol>
+            <h3 id="-a-name-selectexpression-how-to-select-an-expression-value-a-"><a name="selectExpression">How to select an expression value </a></h3>
+            <p>To select an expression value simply press the <a href="#menu">input field (1)</a> by either using the zSpace Stylus or a mouse. Enter input by using a keyboard. The <a href="#menu">autofill feature (10)</a> will provide a selection according to the current input. </p>
+            <h3 id="-a-name-selectexpression-how-to-select-an-expression-value-a-"><a name="selectExpression">How to select an expression value </a></h3>
+            <p>Per default the first model will be automatically selected for values chosen from the <a href="#menu">input field (1)</a>. Once an expression value was chosen for the first object two new buttons will appear in the menu. The <em>Combined</em> button allows to add a second object, while the [<em>heatmap</em> button}(#heatmap) allows a difference based comparison of both objects.
+            <br>
+            <img src="https://user-images.githubusercontent.com/79250095/135041483-c39e27e8-5588-43cc-991b-e963eb8a50d3.png" width="800px" alt="zSpace_comb_heatmap">
+            <p>Clicking the <em>Combined</em> button, the second object will be added as shown in the following:
+            <img src="https://user-images.githubusercontent.com/79250095/135041794-ae3713b9-c9b6-44ff-b2a8-99811be2b178.png" width="800px" alt="image"></p>
+            <p>Once a expression value from the <a href="#menu"><em>Similar Genes (4)</em></a> is selected, it will automatically be expressed on the new heartmodel to compare it with the first selection. </p>
+            <h3 id="-a-name-explode-explode-function-a-"><a name="explode">Explode Function</a></h3>
+            <p>The explode function will expand the model based on its hierarchy. this feature might not work properly for custom objects. To toggle between the normal view and the exploded view press the <a href="#menu"><em>Expand button (2)</em></a>.</p>
+            <img src="https://user-images.githubusercontent.com/79250095/134447818-21544de8-5dd4-4689-834d-6c8a84e938db.png" width="800px" alt="Screenshot (238)">
+            <h3 id="change-between-absolute-and-normalized-expression-values">Change between absolute and normalized expression values</h3>
+            <p>VR-Cardiomics allows to present expression data either in absolute or in normalised values. Our example data is based on log2CPM values for absolute. If <a href="#custom">own datasets</a> is used, the absolute values will represent the uploaded values of the csv file. Toggle between Normalised or Absolute by using the <a href="#menu"><em>N/A button (9)</em></a>.</p>
+            <h3 id="-a-name-heatmap-how-to-use-the-heatmap-comparison-a-"><a name="heatmap">How to use the heatmap comparison </a></h3>
+            <p>The heatmap comparison is a useful feature to allow calculating the absolute differences of each piece of the object between two expression patterns. The feature will automatically calculate those differences and apply a new colourisation to the model regarding how big the differences in each selected piece are. To use the heatmap function just select an expression for both objects and then press the <em>Heatmap button</em> that automatically appears when selecting a expression value. (see <a href="#selectExpression">How to select an expression value</a>).</p>
+            <h3 id="export-data-images">Export data/images</h3>
+            <ol>
+            <li><strong>Exporting Similar Expressions</strong> → If an expression value is <a href="#selectExpression">selected</a> a list of similar expressions will be calculated based on the selection. This list can be exported as a csv file using the export button on the <a href="#menu">menu (5)</a>. This CSV file is then saved in the Asset folder of Unity (blue) calles <em>SimilarGenes.txt</em>.</li>
+            <li><strong>Logfile</strong> → For each session a logfile will be created to keep track of everything you did during your session. This logfile is saved automatically on your local machine within the Assets folder of Unity (blue) called <em>SessionLog.txt</em>.
+            <img src="https://user-images.githubusercontent.com/79250095/135043900-ec6df8b7-a55c-41b3-a181-f39a984ff93d.png" width="800px" alt="zSpace_Files"> </li>
+            </ol>
+            <h3 id="piecewise-comparison-group-selection">Piecewise Comparison / Group Selection</h3>
+            <p>The <em>piecewise comparison/ group selection</em> is a feature that allows to group a number of pieces of the object together in two groups. Based on those two groups a list of expression values is generated matching the pattern of the selected pieces. 
+            To use this feature press the <em>Piecewise Comparison</em> Button on the <a href="#menu">menu (6)</a>. All objects will be deleted except of one object. This object can be used to select the pieces of the first group. Simply click on them using the zSpace Stylus or using a mouse. The pieces will be highlighted to confirm the selection. Now push the button of the <a href="#menu">menu (6)</a> again to confirm the first group and start selecting new pieces for group 2. If the selection is done just press the button of the <a href="#menu">menu (6)</a> again to confirm selection and start calculating the matching expression values. The results will be shown in the table below. 
+            To deselect pieces from the selection just select them anew.</p>
+            <h3 id="additional-features">Additional features</h3>
+            <ul>
+            <li>Reset the environment by using the <a href="#menu"><em>reset button</em> (3).</a></li>
+            <li>The <a href="#menu"><em>colour button</em> (7)</a> will show the colour transition from low to high expression</li>
+            </ul>
+            <h2 id="-a-name-custom-upload-custom-data-a-"><a name="custom">Upload custom data </a></h2>
+            <p>VR-Cardiomics allows users to upload their own datasets or models. However, since VR-Cardiomics is still a work in progress, certain requirements of the datasets as well as the objects are expected.</p>
+            <h3 id="upload-datasets">Upload datasets</h3>
+            <p>VR-Cardiomics allows to upload datasets in csv format. Either as csv or txt files. Please follow the following instructions to change a dataset:</p>
+            <p><strong>Change dataset in editor</strong></p>
+            <ol>
+            <li>Open VR-Cardiomics zSpace in the <a href="#runVR">Unity editor</a>.</li>
+            <li>Navigate to <code>Assets\Resources</code></li>
+            <li>Press right click and select <em>Import New Asset</em></li>
+            <li>Browse your local machine and select the dataset to be uploaded</li>
+            </ol>
+            <br>
+            <img src="https://user-images.githubusercontent.com/79250095/135180909-1ab14a5b-28aa-40c5-8c92-3ad293241a5a.png" width="800px" alt="image">
+            <ol>
+            <li><p>Select the <em>ScriptHolder</em> Object in the Hierarchy tab and drag and drop the new dataset into the field <em>Csv Name</em> within the <em>Colour</em> Script (green arrow).
+            <br>
+                <img src="https://user-images.githubusercontent.com/79250095/135181172-614c47fc-0bf0-4ace-9edd-db8d165f5c55.png" width="800px" alt="zSpaceNewFile">
+            </li>
+            <li><p>The file <em>valid_names</em> (blue) in the figure above needs to be changed to match your new dataset. It is a list of all items you want to use, ensure that all items of your dataset are in the <em>valid_names</em> list. Please make sure, that the name of the file won&#39;t be changed.</p>
+            </li>
+            </ol>
+            <p><strong>Example files and structure of datasets</strong>
+            This version of <em>VR-Cardiomics</em> comes with sample data to use. The dataset is stored in <code>Assets\Resources\fake_mouse_expression.txt</code>. A snippet of the dataset is shown here:
+            <img src="https://user-images.githubusercontent.com/79250095/135015941-16cef151-9b09-4a66-ad2a-860888ff798b.png" width="800px" alt="image">
+            <p>Each line of a customised dataset must start with the items name, followed by exactly 18 expression values in csv format, due to the current limitations as explained below.</p>
+            <p><strong>Current limitations of the dataset</strong>
+            VR-Cardiomics is a work in progress. We developed it to use it on a 18 section slices heart model. Therefore, currently only datasets and models with exactly 18 slices are able to be used within the environment. We will take care of this limitation and to allow variable datasets and models as soon as possible.</p>
+            <h2 id="-a-name-trouble-troubleshooting-a-"><a name="trouble">Troubleshooting </a></h2>
+            <h3 id="if-the-application-seems-to-be-not-working-in-unity-game-view-while-running-please-navigate-from-edit-project-settings-player-amd-emsure-that-virtual-reality-supported-is-not-ticked-">If the application seems to be not working in Unity game view while running, please navigate from Edit → Project Settings → Player and ensure that <em>Virtual Reality Supported</em> is <strong>not</strong> ticked.</h3>
+            <img src="https://user-images.githubusercontent.com/79250095/134309050-125952d3-bf16-464e-8f67-9a88e76fb381.png"  width="800px" alt="image">
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">Murdoch Children's Research Institute, Parkville, Melbourne</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">denis.bienroth@mcri.edu.au</p>
+                    <br>
+                    <h6 class="mb-0">Website</h6>
+                    <p class="mb-0"><a href="https://www.mcri.edu.au/research/research-areas/stem-cell-biology/transcriptomics-and-bioinformatics">MCRI website</a> </p>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script></p>     
+            </footer>
+            <!-- End of Page Footer -->  
+        </div>
+    </section>
+	
+	<!-- core  -->
+    <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="../assets/vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- LeadMark js -->
+    <script src="../assets/js/leadmark.js"></script>
+
+</body>
+</html>

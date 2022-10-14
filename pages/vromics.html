@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Ramialison-Lab Software Website">
+    <meta name="author" content="Ramialison-Lab">
+    <title>Ramialison-Lab software WebsiteS</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+	<link rel="stylesheet" href="../assets/css/leadmark.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/imgs/logo_free.png" alt="">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="https://github.com/Ramialison-Lab/VR-Omics">GitHub code</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#abstract">Abstract</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#documentation">Documentation</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="vromics">
+            <div class="overlay">
+                <h1 class="subtitle">Visualisation and Analysis of Spatiallr Resolved Transcriptomics data.</h1>
+                <h1 class="title">VR-Omics</h1>  
+            </div>
+            <div class="shape">
+                <svg viewBox="0 0 1500 200">
+                    <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+                </svg>
+            </div>  
+            <div class="mouse-icon"><div class="wheel"></div>
+        </div>
+    </header>
+    <!-- End Of Page Header -->
+
+    <!-- Inputs -->
+   <section class="section" id="abstract">
+    <hr>
+      <div class="container">
+          <div class="row justify-content-between">
+              <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
+                  <h6 class="section-title mb-0">Abstract</h6>
+                    <p>Spatially resolved transcriptomics is an emerging class of high-throughput technologies that enable biologists to systematically investigate spatiotemporal gene expression patterns. 
+                        Upon data acquisition, one major hurdle is the subsequent interpretation and visualization of the datasets acquired. To address this challenge, we present a novel data visualization system with interactive functionalities in virtual reality, using an embedded automated workflow for analysis and data processing. The application is designed to help biologists to analyse and interpret spatially resolved transcriptomic datasets. Supported are various technologies such as Visium and Xenium by 10X Genomics, STOmics by BGI, MERFISH by VIZGEN or Tomo-seq. The system is implemented as a local 2D desktop application or as an immersive environment using head-mounted display virtual reality. This allows biologists to interact with the data in novel ways not previously possible, which includes visually exploring the gene expression patterns of an organ and comparing genes based on their 3D expression profiles. 
+                        </p>
+               </div>
+              <div class="col-md-6 pl-md-5">
+                  <div class="row">
+                     <div class="col-6">
+                        <img src="../assets/imgs/vromics_poster.png" alt="" class="w-150 shadow-sm">
+                    </div>
+                  </div>
+              </div>
+          </div>              
+      </div>
+  </section>
+<section class="section" id="documentation">
+   <div class="container">
+   <h1 id="vrcardiomics">Documentation</h1>
+
+<hr>   
+    <div class="container">
+        <h2>Setup</h2>
+    </div>
+    <div class="container">
+        <h2>Automated Workflow</h2>
+            <h3>Visium</h3>
+                <h6 class="section-secondary-title mt-5">Download:</h6>
+                <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Download dataset without filter or spatial analysis</td>
+                        <td>VISIUM > download > select from drop down menu > leave all other selections blank and select either Process to download the data or Process and Visualise to download the data a directly visualise the data in the VR-Omics visualiser.</td>
+                        <td>The dropdown contains all publicly published datasets from https://www.10xgenomics.com/resources/datasets  and will be automatically updated if new datasets are being published. </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Download and filter dataset
+
+                            [can be combined with spatial analysis and output plots]
+                        </td>
+                        <td>VISIUM > download> select from drop down menu > set filter parameters (more information about filter parameters can be found under “Filter Visium data”. Click Process to download and filter the dataset or Process and Visualise to download and filter the dataset and continue to the VR-Omics visualiser. </td>
+                        <td>All filter steps that are left blank will be skipped, only filter steps containing a value will be processed.
+
+                            The downloaded data will be saved at DATAPATH
+                            
+                            The data is filtered using the embedded Python environment and Scanpy (https://scanpy-tutorials.readthedocs.io/en/latest/spatial/basic-analysis.html), for more information go to “Filter Visium data”.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Download and spatially analyse dataset
+
+                            [can be combined with filter and output plots]
+                            </td>
+                        <td>VISIUM > download > tick the Spatially variable genes box and click Process or Process and Visualise</td>
+                        <td>The dataset will be downloaded, and a spatial variable gene analysis will be performed. 
+                            This step usually takes around 30 minutes depending on the machine and the size of the dataset. 
+                            
+                            Spatially variable genes analysis is performed using the Python package “SpatialDE” https://www.nature.com/articles/nmeth.4636
+                            </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Download data and include output plots
+
+                            [can be combined with filter and spatial analysis]                            
+                        </td>
+                        <td>VISIUM > download > tick the “Create output plots” box and select “Process” or “Process and Visualise”</td>
+                        <td>The automated workflow will produce a variety of output plots including:
+                            -	H&E stain image
+                            -	Spatial cluster
+                            -	Spatial gene counts
+                            -	Histogram total counts
+                            -	UMAPs
+                            The plots can be found under DATAPATH/figures
+                         </td>
+                    </tr>
+                </tbody>
+                </table>
+            <h3>Xenium</h3>
+            <h3>Tomo-seq</h3>
+            <h3>STOmics</h3>
+            <h3>MERFISH</h3>
+            <h3>Other - Custom data</h3>
+   </div>
+   <div class="container">
+
+        <h2>Visualisation</h2>
+            <h3>Visium</h3>
+            <h3>Xenium</h3>
+            <h3>Tomo-seq</h3>
+            <h3>STOmics</h3>
+            <h3>MERFISH</h3>
+            <h3>Other - Custom data</h3>
+    </div>
+
+   </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">Murdoch Children's Research Institute, Parkville, Melbourne</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">denis.bienroth@mcri.edu.au</p>
+                    <br>
+                    <h6 class="mb-0">Website</h6>
+                    <p class="mb-0"><a href="https://www.mcri.edu.au/research/research-areas/stem-cell-biology/transcriptomics-and-bioinformatics">MCRI website</a> </p>
+ 
+                    <p></p>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script></p>     
+            </footer>
+            <!-- End of Page Footer -->  
+        </div>
+    </section>
+	
+	<!-- core  -->
+    <script src="../assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="../assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="../assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="../assets/vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- LeadMark js -->
+    <script src="../assets/js/leadmark.js"></script>
+
+</body>
+</html>
