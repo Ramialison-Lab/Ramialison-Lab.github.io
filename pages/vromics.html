@@ -48,7 +48,7 @@
     <header class="header">
         <div class="vromics">
             <div class="overlay">
-                <h1 class="subtitle">Visualisation and Analysis of Spatiallr Resolved Transcriptomics data.</h1>
+                <h1 class="subtitle">Visualisation and Analysis of Spatially Resolved Transcriptomics data.</h1>
                 <h1 class="title">VR-Omics</h1>  
             </div>
             <div class="shape">
@@ -86,72 +86,223 @@
    <div class="container">
    <h1 id="vrcardiomics">Documentation</h1>
 
+   <button type="button" class="btn btn-light"><a href="#visium">Visium</a></button>
+   <button type="button" class="btn btn-light"><a href="#xenium">Xenium</a></button>
+   <button type="button" class="btn btn-light"><a href="#tomo">Tomo-Seq</a></button>
+   <button type="button" class="btn btn-light"><a href="#stomics">STOmics</a></button>
+   <button type="button" class="btn btn-light"><a href="#merfish">MERFISH</a></button>
+   <button type="button" class="btn btn-light"><a href="#other">Other</a></button>
+
+
 <hr>   
     <div class="container">
         <h2>Setup</h2>
     </div>
     <div class="container">
-        <h2>Automated Workflow</h2>
-            <h3>Visium</h3>
-                <h6 class="section-secondary-title mt-5">Download:</h6>
-                <table class="table table-striped">
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Download dataset without filter or spatial analysis</td>
-                        <td>VISIUM > download > select from drop down menu > leave all other selections blank and select either Process to download the data or Process and Visualise to download the data a directly visualise the data in the VR-Omics visualiser.</td>
-                        <td>The dropdown contains all publicly published datasets from https://www.10xgenomics.com/resources/datasets  and will be automatically updated if new datasets are being published. </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Download and filter dataset
+        <h2>Using the Automated Workflow</h2>
+                <a id="visium"></a><h3>Visium</h3></summary>
+                <!-- Download section collapsible -->
+                <details><summary><strong>Download:</strong></summary> <a id="visium_download"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Download dataset without filter or spatial analysis</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Download</span></li> 
+                                        <li>Select dataset from the dropdown</li> 
+                                        <li>Leave all other selections blank and select either <span class="badge badge-pill badge-info">Process</span> to download the data or <span class="badge badge-pill badge-info">Process and Visualise</span> to download the data a directly visualise the data in the VR-Omics Visualiser.</li>
+                                    </ol>
+                                </td>
+                                <td>The dropdown contains all publicly published datasets from <a href="https://www.10xgenomics.com/resources/datasets" target="_blank" rel="noopener noreferrer">10Xgenomics</a>  and will be automatically updated if new datasets are being published.
+                                <img src="../assets/imgs/VR_Omics/visium_download.PNG" class="w-100"></td>
 
-                            [can be combined with spatial analysis and output plots]
-                        </td>
-                        <td>VISIUM > download> select from drop down menu > set filter parameters (more information about filter parameters can be found under “Filter Visium data”. Click Process to download and filter the dataset or Process and Visualise to download and filter the dataset and continue to the VR-Omics visualiser. </td>
-                        <td>All filter steps that are left blank will be skipped, only filter steps containing a value will be processed.
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Download and filter dataset 
+                                <p></p>
+                                <p>Combinable with:<span class="badge badge-success"> Spatial Analysis </span> <span class="badge badge-success">Output Plots</span> <span class="badge badge-success">Filter</span></p>
+                                </td>
+                                <td> 
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Download</span></li> 
+                                        <li>Select dataset from the dropdown</li> 
+                                        <li><a href="#filter">Filter dataset </a> by entering the respective parameters into the Input boxes (optional).</li> 
+                                        <li>Click <span class="badge badge-pill badge-info">Process</span> to continue or <span class="badge badge-pill badge-info">Process and Visualise</span> to continue to VR-Omics Visualiser once the data is being processed. </li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Only filter steps containing a value will be processed, fields left blank will be ignored.</li>
+                                        <li>The downloaded data will be saved to DATAPATH</li>
+                                        <li>The data is <a href="#filter">filtered</a> using <a href="https://scanpy-tutorials.readthedocs.io/en/latest/spatial/basic-analysis.html" target="_blank" rel="noopener noreferrer">Scanpy</a>.</li>
+                                    </ul>
+                                    <img src="../assets/imgs/VR_Omics/visium_download_overview.PNG" class="w-100">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Download dataset and perform spatial analysis
+                                <p></p>
+                                <p>Combinable with: <span class="badge badge-success">Filter</span> <span class="badge badge-success">Output Plots</span></p>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Download</span></li> 
+                                        <li>Tick the <span class="badge badge-pill badge-info">Spatially Variable Genes</span> box</li> 
+                                        <li>Continue by clicking <span class="badge badge-pill badge-info">Process</span> or <span class="badge badge-pill badge-info">Process and Visualise</span></li>
+                                    </ol>
+                                </td>
+                                <td><ul>
+                                        <li>The dataset will be downloaded, and a spatial variable gene analysis will be performed.</li>
+                                        <li>This step usually takes around 30 minutes depending on your local machine and the size of the dataset.</li>
+                                        <li>Spatially variable genes analysis is performed using the Python package <a href="https://www.nature.com/articles/nmeth.4636">SpatialDE</a></li>
+                                </ul>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Download data and include output plots
+                                    <p></p>
+                                    <p>Combinable with: <span class="badge badge-success">Filter</span> <span class="badge badge-success">Spatial Analysis</span></p>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Download</span></li> 
+                                        <li>Tick the <span class="badge badge-pill badge-info">Create Plots</span> box</li> 
+                                        <li>Continue by clicking <span class="badge badge-pill badge-info">Process</span> or <span class="badge badge-pill badge-info">Process and Visualise</span></li>
+                                    </ol>
+                                </td>
+                                <td>The automated workflow will produce a variety of output plots including:
+                                    <ul>
+                                        <li>H&E stain image</li>
+                                        <li>Spatial cluster</li>
+                                        <li>Spatial gene counts</li>
+                                        <li>Histogram total counts</li>
+                                        <li>UMAPs</li>    
+                                    </ul>
+                                    The plots can be found under DATAPATH/figures
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <!-- Load section collapsible -->
+                <details><summary><strong>Load:</strong></summary><a id="visium_load"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Load multiple Visium datasets</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                        <li>Click the <span class="badge badge-pill badge-info">Browse</span> button and search for the sample folders of the Visium slice (Ensure the folder has <a href="#format">this format</a>.)* </li>
+                                    </ol>
+                                </td>
+                                <td>* The folder will be in the right format if the sample was downloaded using the VR-Omics Automated Workflow or the Sample has been processed using the Automated Workflow beforehand.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select sample folders</td>
+                                <td>Select all sample folders in the Explorer menu and click <span class="badge badge-pill badge-info">Load</span>
+                                </td>
+                                <td><img src="../assets/imgs/VR_Omics/Select_slices_load.PNG" class="w-100"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Arrange the order of the samples</td>
+                                <td>
+                                    <p>Each sample will be shown in an individual container, showing the respective H&E stain image, the name of the sample, and the order in how the samples should be mapped into 3D context from top town.</p>
+                                    <p>Arrange the order of the samples by clicking <span class="badge badge-pill badge-info">˄</span> or <span class="badge badge-pill badge-info">˅</span>. </p>
+                                    <p>Delte a sample by pressing the bin button <span class="badge badge-pill badge-info">🗑</span>. The H&E image can be expanded by clicking the expand button on the image.</p>
+                                </td>
+                                <td><img src="../assets/imgs/VR_Omics/show_slices_load.PNG" class="w-100"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Rotate the samples in the 3D mapping tool</td>
+                                <td>
+                                    <p>From the dropdown select which sample to operate on, all other samples are fixed.</p>
+                                    <p>Use the slider to set the transparency of the current selected sample.</p>
+                                    <p>Tick the boxes of each sample that currently should be visualised. All unticked samples will be invisible.</p>
+                                    <p>Use the <span class="badge badge-pill badge-info">+</span> Button to rotate the slice clockwise or the <span class="badge badge-pill badge-info">-</span> Button to rotate it counter clockwise.</p>
+                                    <p>This allows aligning the samples if they have been misplaced or rotatet on the capture area.</p>
+                                    <p>The slices can still be rotated in the VR-Omics Visualiser later to further adjust them.</p>
+                               </td>
+                                <td><img src="../assets/imgs/VR_Omics/rotate_slices_load.PNG" class="w-100"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Set the distances between the samples</td>
+                                <td>
+                                    <p>Int the text box at the bottom left enter the distances between the samples.</p>
+                                    <p>The distances are applied from front to back. The first value sets the distance between the first and the secon slide. The second value sets the distance between slice two and three.</p>
+                                    <p>Enter the values separated by a comma <i>(e. g. 10,20,50,10)</i></p>
+                                    <p>Click the <span class="badge badge-pill badge-info">Go!</span> button if all adjustments are made to visualise the combined dataset in the VR-Omics Visualiser.</p>
+                               </td>
+                                <td><img src="../assets/imgs/VR_Omics/set_distances_load.PNG" class="w-100"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <!-- Process section collapsible -->
+                <details><summary><strong>Process:</strong></summary><a id="visium_processed"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Process Visium datasets</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Process</span></li> 
+                                    </ol>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <!-- Demo section collapsible -->
+                <details><summary><strong>C18 Demo:</strong></summary><a id="visium_demo"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>C18 Demo dataset</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">C18 demo</span></li> 
+                                    </ol>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
 
-                            The downloaded data will be saved at DATAPATH
-                            
-                            The data is filtered using the embedded Python environment and Scanpy (https://scanpy-tutorials.readthedocs.io/en/latest/spatial/basic-analysis.html), for more information go to “Filter Visium data”.
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Download and spatially analyse dataset
 
-                            [can be combined with filter and output plots]
-                            </td>
-                        <td>VISIUM > download > tick the Spatially variable genes box and click Process or Process and Visualise</td>
-                        <td>The dataset will be downloaded, and a spatial variable gene analysis will be performed. 
-                            This step usually takes around 30 minutes depending on the machine and the size of the dataset. 
-                            
-                            Spatially variable genes analysis is performed using the Python package “SpatialDE” https://www.nature.com/articles/nmeth.4636
-                            </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Download data and include output plots
-
-                            [can be combined with filter and spatial analysis]                            
-                        </td>
-                        <td>VISIUM > download > tick the “Create output plots” box and select “Process” or “Process and Visualise”</td>
-                        <td>The automated workflow will produce a variety of output plots including:
-                            -	H&E stain image
-                            -	Spatial cluster
-                            -	Spatial gene counts
-                            -	Histogram total counts
-                            -	UMAPs
-                            The plots can be found under DATAPATH/figures
-                         </td>
-                    </tr>
-                </tbody>
-                </table>
-            <h3>Xenium</h3>
-            <h3>Tomo-seq</h3>
-            <h3>STOmics</h3>
-            <h3>MERFISH</h3>
-            <h3>Other - Custom data</h3>
+            <a id="filter"></a><h6 class="section-secondary-title mt-5">Setting filter parameters:</h6>
+            <a id="format"></a><h6 class="section-secondary-title mt-5">Visium Sample Folder Format</h6>
+            <details><summary>Visium folder required format</summary>
+                <img src="../assets/imgs/VR_Omics/File_format_visium.png" alt="" class="w-50 shadow-sm">
+                <p>Please ensure this strucutre of your Visium data to use the VR-Omics Visualiser. This structure will automatically be generated by all sample datasets that are either <a href="#visium_download">downloaded</a> or <a href="#visium_processed">processed</a> using the VR-Omics Automated Workflow.
+                <p>Text highlighted in grey refers to a specific file name that needs to be named with this ending to be fined by VR-Omics.</p>
+                </details>
+            <a id="xenium"></a><h3>Xenium</h3>
+            <a id="tomo"></a> <h3>Tomo-seq</h3>
+            <a id="stomics"></a> <h3>STOmics</h3>
+            <a id="merfish"></a><h3>MERFISH</h3>
+            <a id="other"></a><h3>Other - Custom data</h3>
    </div>
    <div class="container">
 
