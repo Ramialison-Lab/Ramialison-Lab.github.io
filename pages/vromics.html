@@ -115,8 +115,9 @@
     <div class="container">
         <!-- TODO: remove open param -->
         <details open><summary> <span style="font-size: 24px">VR-Omics Automated Workflow</span></summary>
+            <!-- Visium -->
             <details  class="details"><summary> <span style="font-size: 18px">Visium</span><a id="aw_visium"></a></summary>
-                    <details class="details sub"><summary><strong>Download:</strong></summary> <a id="visium_download"></a>
+                    <details class="details sub"><summary><strong>Download</strong></summary> <a id="visium_download"></a>
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -146,7 +147,6 @@
                                         <br>
                                         <p>The download menu accesses the <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and downloads the requested data automatically, while processing it to be read by the VR-Omics Visualiser.</p>                             
                                     </td>
-                                </div>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -250,7 +250,7 @@
                         </table>
                 </details>
                 <!-- Load section collapsible -->
-                <details class="details sub"><summary><strong>Load:</strong></summary><a id="visium_load"></a>
+                <details class="details sub"><summary><strong>Load</strong></summary><a id="visium_load"></a>
                     <br>
                     <h2>Merging multiple Visium slides into one dataset</h2>
                     <table class="table table-striped">
@@ -421,7 +421,7 @@
                     </table>
                 </details>
                 <!-- Process section collapsible -->
-                <details class="details sub"><summary><strong>Process:</strong></summary><a id="visium_process"></a>
+                <details class="details sub"><summary><strong>Process</strong></summary><a id="visium_process"></a>
                     <table class="table table-striped">
                         <tbody>
                             <tr>
@@ -511,7 +511,7 @@
                     </table>
                 </details>
                 <!-- Demo section collapsible -->
-                <details class="details sub"><summary><strong>Demo:</strong></summary><a id="visium_demo"></a>
+                <details class="details sub"><summary><strong>Demo</strong></summary><a id="visium_demo"></a>
                     <table class="table table-striped">
                         <tbody>
                             <tr>
@@ -549,8 +549,8 @@
                         </tbody>
                     </table>
                 </details>
-
-                <details class="details sub"><summary>Setting filter parameters:</summary>
+                <!-- Filter parameter explanation -->
+                <details class="details sub"><summary>Filter parameters</summary>
                     <a id="filter"></a>
                     <table class="table table-striped">
                         <tbody>
@@ -610,6 +610,7 @@
                         <p>Further information can be found in the <a href="https://scanpy-tutorials.readthedocs.io/en/latest/spatial/basic-analysis.html">Scanpy spatial analysis documentation.</a></p>
                     </div> 
                 </details>
+                <!-- Folder required format -->
                 <details class="details sub"><summary>Visium folder required format</summary>
                     <a id="format"></a>
                     <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_file_format.png" alt="" class="w-50 shadow-sm">
@@ -617,20 +618,453 @@
                     <p>Text highlighted in grey refers to a specific file name that needs to be named with this ending to be fined by VR-Omics.</p>
                 </details>
             </details>
+            <!-- XENIUM -->
             <details class="details"><summary> <span style="font-size: 18px">Xenium</span><a id="aw_xenium"></a></summary>
+                <details class="details sub"><summary><strong>Process</strong></summary><a id="xenium_process"></a>
+                    <h2>Process Xenium data</h2>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Navigate to the Xenium process menu</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Xenium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Process</span></li> 
+                                    </ol>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Xenium/xenium_options.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select the Xenium files</td>
+                                <td>
+                                    <li>Select the gene expression matrix <code>.mtx</code> file of the Xenium data using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                    <li>Select the gene panel <code>_panel.tsv</code> file of the Xenium data using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                    <li>Select the cell information <code>cell_info_csv.csv</code> file of the Xenium data using <span class="badge badge-pill badge-info">Browse</span>.</li>                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Xenium/xenium_process.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <p>Only one public dataset was available during development of VR-Omics</p>
+                                    <p>The dataset can be downloaded from <a href="https://www.10xgenomics.com/resources">10X Genomics.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Confirm selection</td>
+                                <td>
+                                    <p>Click <span class="badge badge-pill badge-info">Process</span> to process the data. </p>
+                                    <p>The processed data will be saved locally.</p>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Xenium/xenium_process.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <p>The process step can take up to 5 minutes depending on the size of the dataset.</p>
+                                    <p>Once the data was processed this step can be skipped and the data can be visualised using the <a href="#xenium_load">Xenium load</a> option.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <details class="details sub"><summary><strong>Load</strong></summary><a id="xenium_load"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Navigate to the Xenium load menu</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Xenium</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                    </ol>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Xenium/xenium_options.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select the Xenium files</td>
+                                <td>
+                                    <li>Select the processed Xenium <code>.h5</code> file of the Xenium data using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                    <li>Select the gene panel <code>_panel.tsv</code> or <code>_features_tsv</code> file of the Xenium data using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                    <li>Select the cell information <code>cell_info_csv.csv</code> file of the Xenium data using <span class="badge badge-pill badge-info">Browse</span>.</li>                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Xenium/xenium_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <p>Only one public dataset was available during development of VR-Omics</p>
+                                    <p>The dataset can be downloaded from <a href="https://www.10xgenomics.com/resources">10X Genomics.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Confirm selection</td>
+                                <td>
+                                    <p>Click <span class="badge badge-pill badge-info">Process</span> to visualise the data using the VR-Omics Visualiser.<p>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Xenium/xenium_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <p>Loading the data into the VR-Omics visualiser might take up to a minute depending on the size of the dataset.</p>
+                                    <p>Ensure the data has been processed using the <a href="#xenium_process">Process</a> function.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
             </details>
+            <!-- Tomo-Seq -->
             <details class="details"><summary> <span style="font-size: 18px">Tomo-Seq</span><a id="aw_tomo"></a></summary>
+                <details class="details sub"><summary><strong>Load</strong></summary><a id="tomo_load"></a>
+                    <h2>Load Tomo-Seq data</h2>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Navigate to the Tomo-Seq load menu</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Tomo-Seq</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                    </ol>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Tomo-seq/tomo_options.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select the Tomo-Seq files</td>
+                                <td>
+                                    <li>Select the gene expression <code>.csv</code> file in AP* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                    <li>Select the gene expression <code>.csv</code> file in VD* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                    <li>Select the gene expression <code>.csv</code> file in LR* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                    <li>Select the 3d reconstructed gene expression <code>.txt</code> file for a gene using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Tomo-seq/tomo_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div>                                         
+                                    <p>* AP = anterior to posterior, VD = ventral to dorsal, and LR = left to right </p>
+                                    <p>The 3D reconstruction of the gene expression is explained in <a href="https://doi.org/10.1016/j.cell.2019.11.025"><i>Asp et al.</a> in <a href="https://www.cell.com/cell/fulltext/S0092-8674(14)01226-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867414012264%3Fshowall%3Dtrue#supplementaryMaterial">Supplementary Data S2.</a> </i></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
             </details>
+            <!-- STOmics -->
             <details  class="details"><summary> <span style="font-size: 18px">STOmics</span><a id="aw_stomics"></a></summary>
+                <details class="details sub"><summary><strong>Process</strong></summary><a id="stomics_process"></a>
+                    <h2>Process STOmics data</h2>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Navigate to the STOmics process menu</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">STOmics</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                    </ol>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Stomics/stomics_options.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select the STOmics file</td>
+                                <td>
+                                    <p>Select the gene expression matrix <code>.h5</code> file of the STOmics data using <span class="badge badge-pill badge-info">Browse</span>.
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Stomics/stomics_process.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <p>The dataset can be downloaded from <a href="https://db.cngb.org/stomics">STOmics Database.</a></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Confirm selection</td>
+                                <td>
+                                    <p>Click <span class="badge badge-pill badge-info">Process</span> to process the data. </p>
+                                    <p>The processed data will be saved locally.</p>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Stomics/stomics_process.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <p>The process step can take up to 5 minutes depending on the size of the dataset.</p>
+                                    <p>Once the data was processed this step can be skipped and the data can be visualised using the <a href="#stomics_load">STOmics load</a> option.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <details class="details sub"><summary><strong>Load</strong></summary><a id="stomics_load"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Navigate to the STOmics load menu</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">STOmics</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                    </ol>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Stomics/stomics_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select the STOmics files</td>
+                                <td>
+                                    <p>Select the processed gene expression STOmics <code>.h5</code> file using <span class="badge badge-pill badge-info">Browse</span>.
+                               </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Stomics/stomics_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <p>Ensure the data was processed using the <a href="#stomics_process">Process</a> function.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
             </details>
+            <!-- MERFISH -->
             <details  class="details"><summary> <span style="font-size: 18px">MERFISH</span><a id="aw_merfish"></a></summary>
-            </details>
+                <details class="details sub"><summary><strong>Load</strong></summary><a id="merfish_load"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Navigate to the MERFISH load menu</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">MERFISH</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                    </ol>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Merfish/merfish_options.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select the MERFISH files</td>
+                                <td>
+                                    <li>Select the MERFISH gene expression <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
+                                    <li>Select the MERFISH cell meta data <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
+                               </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Merfish/merfish_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <p>The MERFISH data used was provided by <a href="vizgen.com">Vizgen</a> where there data is publicly available under their <a href="vizgen.com/data-release-program/">data release program.</a></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </details>            
+            <!-- Custom -->
             <details  class="details"><summary> <span style="font-size: 18px">Custom data</span><a id="aw_other"></a></summary>
+                <details class="details sub"><summary><strong>Load</strong></summary><a id="other_load"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Navigate to the Custom data load menu</td>
+                                <td>
+                                    <ol>
+                                        <li>From the main menu select <span class="badge badge-pill badge-info">Custom data</span></li>
+                                        <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                    </ol>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Custom_and_Object/custom_options.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select the Custom data files</td>
+                                <td>
+                                    <li>Select the custom gene expression* <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
+                                    <li>Select the custom meta data** <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
+                                    <li>Optional: If the dataset contains three dimensions (X,Y, and Z) move the slider with the <span class="badge badge-pill badge-info">2D</span> label to the right.</li>.
+                               </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Custom_and_Object/custom_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                        <p>* Ensure the data is stored in a gene per location data file using columns for locations and rows for gene expressions</p>
+                                        <p>** The meta data file stores the X,Y and optional Z coordinates of the dataset. Each row needs to represent one location where the locations need to be in same order as in the gene expression file.</p>
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Specify columns</td>
+                                <td>
+                                    <li>For the location information uploaded in 2. provide the column that stores the respective information.</li>.
+                                    <li>Select the Column for the X coordinates. For the first column enter <code>0</code> for the second column enter <code>1</code> etc.</li>
+                                    <li>Select the Column for the Y coordinates. For the first column enter <code>0</code> for the second column enter <code>1</code> etc.</li>
+                                    <li>Select the Column for the Z coordinates. For the first column enter <code>0</code> for the second column enter <code>1</code> etc.*</li>
+                                    <li>Select the Column for the Location IDs. For the first column enter <code>0</code> for the second column enter <code>1</code> etc.** </li>
+                                    <li>Tick the <span class="badge badge-pill badge-info">No CSV header</span> box if the CSV files contain no header information.***</li>
+                               </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Custom_and_Object/custom_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                        <p>* Leave blank if no three dimensional dataset</p>
+                                        <p>** Leave blank if no IDs available</p>
+                                        <p>*** The header is the first row in a csv file usually used to store the headers of each column.</p>
+                                    </div> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
             </details>
-            <a id="tomo"></a> <h3>Tomo-seq</h3>
-            <a id="stomics"></a> <h3>STOmics</h3>
-            <a id="merfish"></a><h3>MERFISH</h3>
-            <a id="other"></a><h3>Other - Custom data</h3>
+            <!-- 3D Object -->
+            <details  class="details"><summary> <span style="font-size: 18px">3D Object</span><a id="aw_object"></a></summary>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Use this feature before selecting a dataset to visualise. Objects can't be uploaded once the VR-Omics Visualiser was entered.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+                 </div>
+                <details class="details sub"><summary><strong>Load</strong></summary><a id="object_load"></a>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Navigate to the 3D object menu</td>
+                                <td>
+                                    <p>From the main menu select <span class="badge badge-pill badge-info">3D object</span>
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Custom_and_Object/object_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Select the 3D object file</td>
+                                <td>
+                                    <li>Select the 3D object* using <span class="badge badge-pill badge-info">Browse</span></li>
+                                    <li>Enter the X, Y, and Z Coordinates where the object should be rendered**</li>
+                                    <li>Enter the X, Y, and Z Rotation of the 3D object***</li>
+                               </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Custom_and_Object/object_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                        <p>* Only 3D object supported by Unity can be uploaded. More information can be found using the <a href="https://docs.unity3d.com/2020.1/Documentation/Manual/3D-formats.html">Unity documentation</a>. This feature was tested with <code>.fbx</code> and <code>.obj</code> files.</p>
+                                        <p>** The coordinates are relative to the dataset, the dataset will always be rendered in the origin <code>X,Y,Z → 0,0,0</code>. If no coordinates available use <code>0,0,0</code>. The 3d object can easily be moved within the VR-Omics Visualiser.</p>
+                                        <p>*** The rotation is relative to the dataset, the dataset will always be rendered in the origin <code>X,Y,Z → 0,0,0</code> facing the user with <code>0-rotation</code>. If no rotation values are available use <code>0,0,0</code>. The 3d object can easily be rotated within the VR-Omics Visualiser.</p>
+                                        <p>Ensure the 3D object has the right measurements, the object can be resized within the VR-Omics Visualiser but if the object was uploaded top big, or too small compared to the rendered dataset this might lead to issues. In this case please adapt the dimensions of the object prior.</p>
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Submit the object</td>
+                                <td>
+                                    <p>Store the selected 3D object by clicking <span class="badge badge-pill badge-info">Submit</span>
+                               </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Custom_and_Object/object_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                        <p>Ensure the object was submitted before uploading a spatial dataset. This can't be done after entering the VR-Omics Visualiser.</p>
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Removing an object</td>
+                                <td>
+                                    <p>Remove all selected objects from the selection using <span class="badge badge-pill badge-info">Delete All</span>
+                               </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Custom_and_Object/object_load.png" style="max-width: 100%;">
+                                        </figure> 
+                                        <p>Multiple objects can be uploaded, although this feature is only tested with one object.</p>
+                                    </div> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </details>
         </details>
     </div>
    <div class="container">
