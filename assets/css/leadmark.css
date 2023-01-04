@@ -11809,3 +11809,7 @@ textarea.form-control {
   opacity: 1;
   visibility: visible;
 }
+
+.image-invert{
+  filter: invert(100%)
+}
