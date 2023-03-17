@@ -132,7 +132,7 @@
         </div> 
         <br> -->
         <div class="container">
-            <details open><summary> <span style="font-size: 24px">VR-Omics Setup</span></summary>
+            <details><summary> <span style="font-size: 24px">VR-Omics Setup</span></summary>
                 <br>
                 <!-- Visium -->
                 <a id="aw_visium"></a>
@@ -224,7 +224,11 @@
                                                 </figure>  
                                             </div> 
                                             <br>
-                                            <p>The download menu accesses the <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and downloads the requested data automatically, while processing it to be read by the VR-Omics Visualiser.</p>                             
+                                            <p>The data will be downloaded from the  <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and processed to be read in VR-Omics</p>    
+                                            The data will be stored in the VR-Omics folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code> To Visualise the data select the Visium Load function and select the whole folder from the Browse menu.
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure>                          
                                         </td>
                                     </tr>
                                     <tr>
@@ -247,7 +251,6 @@
                                             <ul>
                                                 <li>Only filter steps containing a value will be processed, fields left blank will be ignored.</li>
                                                 <!-- TODO: Add data path for local files -->
-                                                <li>The downloaded data will be saved locally.</li>
                                                 <li>The data is <a href="#filter">filtered</a> using <a href="https://scanpy-tutorials.readthedocs.io/en/latest/spatial/basic-analysis.html" target="_blank" rel="noopener noreferrer">Scanpy</a>.</li>
                                             </ul>
                                             <div style="width: 600px;">
@@ -257,8 +260,11 @@
                                                 </figure>   
                                             </div>
                                             <br>
-                                            <p>The download menu accesses the <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and downloads the requested data automatically, while processing it to be read by the VR-Omics Visualiser.</p>                             
-                                        </td>
+                                            <p>The data will be downloaded from the  <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and processed to be read in VR-Omics</p>    
+                                            The data will be stored in the VR-Omics folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code> To Visualise the data select the Visium Load function and select the whole folder from the Browse menu.
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure>                                           </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
@@ -288,8 +294,11 @@
                                                 </figure>
                                             </div>   
                                             <br>
-                                            <p>The download menu accesses the <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and downloads the requested data automatically, while processing it to be read by the VR-Omics Visualiser.</p>                             
-                                        </td>
+                                            <p>The data will be downloaded from the  <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and processed to be read in VR-Omics</p>    
+                                            The data will be stored in the VR-Omics folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code> To Visualise the data select the Visium Load function and select the whole folder from the Browse menu.
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure>                                           </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">4</th>
@@ -323,7 +332,10 @@
                                             <br>
                                             <p>The download menu accesses the <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and downloads the requested data automatically, while processing it to be read by the VR-Omics Visualiser.</p>                             
                                             <!-- TODO: Change DATA PATH-->
-                                            The plots will be saved locally under <code>../Dataset/data/Dataset/spatial/</code> with Dataset being the name of the data set.
+                                            The data will be stored in the VR-Omics folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code> To Visualise the data select the Visium Load function and select the whole folder from the Browse menu.
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure> 
                                         </td>
                                     </tr>
                                 </tbody>
@@ -345,7 +357,12 @@
                                             <li>Click the <span class="badge badge-pill badge-info">Browse</span> button and search for the sample folders of the Visium slice (Ensure the folder has <a href="#format">this format</a>.)* </li>
                                         </ol>
                                     </td>
-                                    <td>* The folder will be in the right format if the sample was downloaded using the VR-Omics Automated Workflow or the Sample has been processed using the Automated Workflow beforehand.</td>
+                                    <td>
+                                        <p>* The folder will be in the right format if the sample was downloaded using the VR-Omics Automated Workflow or the Sample has been processed using the Automated Workflow beforehand.</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                        </figure>  
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -428,10 +445,15 @@
                                         <ol>
                                             <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
                                             <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
-                                            <li>Click the <span class="badge badge-pill badge-info">Browse</span> button and search for the sample folder of the Visium slide (Ensure the folder has <a href="#format">this format</a>.)* </li>
+                                            <li>Click the <span class="badge badge-pill badge-info">Browse</span> button and search for the sample folder of the Visium slide. Select the main folder as shown in the figure. Only Data processed or downloaded with VR-Omics can be used, otherwise ensure the folder has <a href="#format">this format</a>.* </li>
                                         </ol>
                                     </td>
-                                    <td>* The folder will be in the right format if the sample was downloaded using the VR-Omics Automated Workflow or the Sample has been processed using the Automated Workflow beforehand.</td>
+                                    <td>
+                                        <p>* The folder will be in the right format if the sample was downloaded using the VR-Omics Automated Workflow or the Sample has been processed using the Automated Workflow beforehand.</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                        </figure>  
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -530,7 +552,11 @@
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/vis_process_only.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
-                                        <p>Optionally, the <span class="badge badge-pill badge-info">Process and filter dataset</span> option can be used if the dataset needs to be filtered.</p>
+                                        <p>Optionally, the <span class="badge badge-pill badge-info">Skip Filter Step</span> option can be used if the dataset does not need to be filtered.</p>
+                                        <p>The output will be saved in the VR-Omics folder</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                        </figure>  
                                     </td>
                                 </tr>
                                 <tr>
@@ -558,8 +584,11 @@
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/vis_process_menu.png" style="max-width: 100%;">
                                             </figure> 
+                                            <p>The output will be saved in the VR-Omics folder</p>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure>  
                                         </div> 
-                                        <p>Optionally, the <span class="badge badge-pill badge-info">Prepare data for VR-Omics only</span> option can be used if the dataset does not need to be filtered</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -730,8 +759,12 @@
                                                 <img src="../assets/imgs/Documentation/Xenium/xenium_process.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
-                                        <p>The process step can take up to 5 minutes depending on the size of the dataset.</p>
+                                        <p>The process step can take a couple of minutes depending on the size of the dataset and the computational power of the computer used.</p>
                                         <p>Once the data was processed this step can be skipped and the data can be visualised using the <a href="#xenium_load">Xenium load</a> option.</p>
+                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                        </figure>  
                                     </td>
                                 </tr>
                             </tbody>
@@ -761,13 +794,16 @@
                                     <th scope="row">2</th>
                                     <td>Select the Xenium files</td>
                                     <td>
-                                        <p>Select the Xenium folder <a href="#xenium_process">processed</a> with the VR-Omics AW using <span class="badge badge-pill badge-info">Browse</span>.</p>
+                                        <p>Select the Xenium folder <a href="#xenium_process">processed</a> with the VR-Omics AW (highlighted in green in the picture) using <span class="badge badge-pill badge-info">Browse</span>.</p>
                                     </td>
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Xenium/xenium_load.png" style="max-width: 100%;">
-                                                <p>The data set can be found in the VR-Omics directory. Navigate from there to <code>Assets/PythonFiles</code> select the whole folder starting with <code>Xenium_output_...</code></p>
+                                                <p>The data set can be found in the VR-Omics directory. Navigate from there to <code>VR-Omics/Assets/PythonFiles/sample</code> select the whole folder as shown in the picture</p>
+                                                <figure>
+                                                    <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                                </figure>  
                                             </figure> 
                                         </div> 
                                         <p>Only one public dataset was available during development of VR-Omics</p>
@@ -786,7 +822,7 @@
                                                 <img src="../assets/imgs/Documentation/Xenium/xenium_load.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
-                                        <p>Ensure the data has been processed using the <a href="#xenium_process">Process</a> function.</p>
+                                        <p>Ensure the data has been processed before visualising it using the <a href="#xenium_process">Process</a> function.</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -824,7 +860,7 @@
                                         <li>Select the gene expression <code>.csv</code> file in AP* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
                                         <li>Select the gene expression <code>.csv</code> file in VD* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
                                         <li>Select the gene expression <code>.csv</code> file in LR* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
-                                        <li>Select the 3d reconstructed gene expression <code>.txt</code> file for a gene using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                        <li>Select the folder containing the reconstructed gene expression <code>.txt</code> files using <span class="badge badge-pill badge-info">Browse</span>.</li>
                                     </td>
                                     <td>
                                         <div style="width: 600px;">
@@ -892,8 +928,12 @@
                                                 <img src="../assets/imgs/Documentation/Stomics/stomics_process.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
-                                        <p>The process step can take up to 5 minutes depending on the size of the dataset.</p>
+                                        <p>The process step can take couple of minutes depending on the size of the dataset and the computational power of the machine.</p>
                                         <p>Once the data was processed this step can be skipped and the data can be visualised using the <a href="#stomics_load">STOmics load</a> option.</p>
+                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                        </figure>  
                                     </td>
                                 </tr>
                             </tbody>
@@ -932,6 +972,10 @@
                                             </figure> 
                                         </div> 
                                         <p>Ensure the data was processed using the <a href="#stomics_process">Process</a> function.</p>
+                                        <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                        </figure>  
                                     </td>
                                 </tr>
                             </tbody>
@@ -977,8 +1021,11 @@
                                                 <img src="../assets/imgs/Documentation/Merfish/merfish_process.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
-                                        <p>The MERFISH data used was provided by <a href="vizgen.com">Vizgen</a> where there data is publicly available under their <a href="vizgen.com/data-release-program/">data release program.</a></p>
-                                        <p>The data will be saved in the VR-Omics directory. From here navigate to <code>Assets/PythonFiles</code></p>
+                                        <p>The MERFISH data we used is from <a href="vizgen.com">Vizgen</a>, where there data is publicly available under their <a href="vizgen.com/data-release-program/">data release program.</a></p>
+                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                        </figure>                                      
                                     </td>
                                 </tr>
                             </tbody>
@@ -1008,14 +1055,17 @@
                                     <th scope="row">2</th>
                                     <td>Select the MERFISH files</td>
                                     <td>
-                                        <li>Select the MERFISH gene expression <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
-                                        <li>Select the MERFISH cell meta data <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
+                                        <li>Select the MERFISH sample folder processed with the VR-Omics AW Process function <span class="badge badge-pill badge-info">Browse</span></li>.
                                 </td>
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Merfish/merfish_load.png" style="max-width: 100%;">
                                             </figure> 
+                                            <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure>   
                                         </div> 
                                         <p>The MERFISH data used was provided by <a href="vizgen.com">Vizgen</a> where there data is publicly available under their <a href="vizgen.com/data-release-program/">data release program.</a></p>
                                     </td>
@@ -2008,7 +2058,7 @@
                                 </th>
                                 <td>
                                     <p>If the VR-Omics Automated Workflow was used to download the Visium data optionally the <a href="#vis_aw_plots">output plots</a> can be generated.</p>
-                                    <p>The plots will be saved locally in the sample folder of the dataset under <code>../Dataset/data/Dataset/spatial/</code>.</p>
+                                    <p>The plots will be saved within the sample folder in the VR-Omics folder <code>../VR-Omics/Assets/PythonFiles/sample/figures</code>.</p>
                                     <!-- TODO: link plots section -->
                                     <p>The plots can also be <a href="#vis_plot_access">quick accessed </a>from the top menu through the Visualiser</p>
                                 </td>
