@@ -131,7 +131,7 @@
                 <li><a href="#vis_customisation">Customisation</a></li>
             </ul>      
         </div>
-
+    </section>   
 
     <hr>   
     <!-- TODO: Setup section -->
@@ -141,65 +141,62 @@
         </div> 
         <br> -->
         <div class="container">
-            <details><summary> <span style="font-size: 24px">VR-Omics Setup</span></summary>
+            <details>
+                <summary><span style="font-size: 24px">VR-Omics Setup</span></summary>
                 <br>
-                <!-- Visium -->
                 <a id="aw_visium"></a>
-                    <table class="table table-striped">
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Download VR-Omics</td>
-                                <td>
-                                    <p> Click the <code>Download VR-Omics</code> button to Download VR-Omics from our repository.</p>
-                                </td>
-                                <td>
-                                    <a href="https://figshare.com/s/b717041b5beaff929629" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Download VR-Omics</td>
-                                <td>
-                                    <p> Click the <code>Download</code> button to Download VR-Omics from figshare/monash bridges</p>
-                                </td>
-                                <td>
-                                    <div style="width: 600px;">
-                                        <img src="../assets/imgs/Documentation/Setup/download_vromics.png" id="vis_opt" style="max-width: 100%;">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>
-                                    <p>Unzip the folder</p>
-                                </td>
-                                <td> 
-                                    <p>Unzip the folder with right-click on the zip folder and select <code>Unzip here</code></p>
-                                </td>
-                                <td>
-                                    <div style="width: 600px;">
-                                        <img src="../assets/imgs/Documentation/Setup/unzip.jpg" id="vis_opt" style="max-width: 100%;">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>
-                                    <p>Start VR-Omics</p>
-                                </td>
-                                <td>
-                                    <p>In the unzipped folder click on the VR-Omics application.</p>
-                                </td>
-                                <td>
-                                    <div style="width: 600px;">
-                                        <img src="../assets/imgs/Documentation/Setup/start_exe.png" id="vis_opt" style="max-width: 100%;">
-                                    </div>
-                               </td>
-                            </tr>
-                        </tbody>
-                    </table>                 
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Download VR-Omics</td>
+                            <td>
+                                <p>Click the <code>Download VR-Omics</code> button to obtain VR-Omics from our repository.</p>
+                            </td>
+                            <td>
+                                <a href="https://figshare.com/s/b717041b5beaff929629" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Download VR-Omics</td>
+                            <td>
+                                <p>Click the <code>Download</code> button to retrieve VR-Omics from figshare/monash bridges.</p>
+                            </td>
+                            <td>
+                                <div style="width: 600px;">
+                                    <img src="../assets/imgs/Documentation/Setup/download_vromics.png" id="vis_opt" style="max-width: 100%;">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Unzip the folder</td>
+                            <td>
+                                <p>To unzip the folder, right-click on the zip file and select <code>Extract here</code>.</p>
+                            </td>
+                            <td>
+                                <div style="width: 600px;">
+                                    <img src="../assets/imgs/Documentation/Setup/unzip.jpg" id="vis_opt" style="max-width: 100%;">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Start VR-Omics</td>
+                            <td>
+                                <p>Once the folder is unzipped, open it and click on the <code>VR-Omics.exe</code>.</p>
+                            </td>
+                            <td>
+                                <div style="width: 600px;">
+                                    <img src="../assets/imgs/Documentation/Setup/start_exe.png" id="vis_opt" style="max-width: 100%;">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </details>
+
             <details open><summary> <span style="font-size: 24px">VR-Omics Automated Workflow</span></summary>
                 <br>
                 <!-- Visium -->
@@ -1248,9 +1245,9 @@
                             <th>Image</th>
                         </thead>
                         <tbody>
-                            <!-- Gene search - normalised -->
+                            <!-- Gene search - heatmap -->
                             <tr>
-                                <th>Gene search - Normalised
+                                <th>Gene search - Heatmap
                                     <hr>
                                     <span class="badge badge-pill badge-primary">Visium</span>
                                     <span class="badge badge-pill badge-info">Xenium</span>
@@ -1263,14 +1260,14 @@
                                     <span class="badge badge badge-secondary">Demo</span>
                                 </th>
                                 <td>
-                                    <p>To search for a gene (normalised) using the search bar:</p>
+                                    <p>To search for a gene (heatmap) using the search bar:</p>
 
                                     <ol>
                                     <li>Click on the search bar located at the top left of the menu panel.</li>
                                     <li>Start typing the name of the desired gene.</li>
-                                    <li>The auto complete feature will display a list of possible results in the scroll view below the search bar. These results will be presented as buttons.</li>
-                                    <li>Click on the desired result to visualise the selected gene expression on the data set in the centre of the screen.</li>
-                                    <li>The gene expression values are normalised and can be referenced using the colour gradient located at the bottom left of the screen.</li>
+                                    <li>The auto-complete feature displays results as buttons below the search bar.</li>
+                                    <li>Click on a result to visualize the selected gene expression on the center of the screen.</li>
+                                    <li>The gene expression values are normalised and can be referenced using the colour gradient legend located at the bottom left of the screen.</li>
                                     </ol>
                                     
                                 </td>
@@ -1289,7 +1286,7 @@
                             </tr>
                             <!-- Gene search - Gene is on -->
                             <tr>
-                                <th>Gene search - Gene is on
+                                <th>Binary search - Gene is on
                                     <hr>
                                     <span class="badge badge-pill badge-primary">Visium</span>
                                     <span class="badge badge-pill badge-info">Xenium</span>
@@ -1310,7 +1307,7 @@
                                         <li>The auto complete feature will display a list of possible results in the scroll view below the search bar. These results will be presented as buttons.</li>
                                         <li>Click on the desired result to visualise the selected gene expression on the data set in the centre of the screen.</li>
                                         <li>The gene expression values are normalised and can be referenced using the colour gradient located at the bottom left of the screen.</li>
-                                    </ol>
+                                    </ol>                                  
                                     
                                 </td>
                                 <td>
@@ -1932,6 +1929,54 @@
                             <th>Image</th>
                         </thead>
                         <tbody>
+                            <!-- Session Continue function -->
+                            <tr>
+                                <th>Continue Session
+                                    <hr>
+                                    <span class="badge badge-pill badge-primary">Visium</span>
+                                    <span class="badge badge-pill badge-info">Xenium</span>
+                                    <span class="badge badge-pill badge-danger">STOmics</span>
+                                    <span class="badge badge-pill badge-dark">Merfish</span>
+                                    <span class="badge badge-pill badge-light">Tomo-Seq</span>
+                                    <span class="badge badge-pill badge-success">Custom</span>
+                                    <hr>
+                                    <span class="badge badge bg-dark">VR</span>                            
+                                    <span class="badge badge badge-secondary">Demo</span>
+                                </th>
+                                <td>
+                                    <p>Your current session can be saved and continued to a later time point.</p>
+                                    <p>This will include:</p>
+                                    <ul>
+                                        <li>The current SRT method and dataset.</li>
+                                        <li>The current camera position.</li>
+                                        <li>Current selected gene.</li>
+                                        <li>Selected ROIs</li>
+                                    </ul>
+
+                                    <p>To save the session select the top menu and click on the <code>Save</code> button.</p>
+                                    <p>To continue a saved session, from the main menu select the <code>Continue Session</code> button</p>
+                                    
+
+                                    <p>Keep in mind that saving the current session will override the last session saved. The sessions are saved as json files within the data structure.</p>
+                                </td>
+                                <td>
+                                    <figure>
+                                        <img class="image-invert" src="../assets/imgs/Documentation/Icons/save.png" style="max-width: 30px;">
+                                    </figure> 
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/SaveSession.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/ContinueSession.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
                             <!-- Screenshot function -->
                             <tr>
                                 <th>Screenshot
