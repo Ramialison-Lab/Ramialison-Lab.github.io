@@ -4570,6 +4570,7 @@ input[type="button"].btn-block {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.5rem 1rem;
+  background-color: #000;
 }
 
 .navbar > .container,
@@ -11226,8 +11227,8 @@ textarea.form-control {
 }
 
 .navbar.custom-navbar {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar.custom-navbar .nav-link {
@@ -11465,6 +11466,15 @@ textarea.form-control {
   width: 100%;
   height:80%;
   background: url(../imgs/logo_black.png) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.header .vromicsv2{
+  position: relative;
+  width: 100%;
+  height:80%;
+  background: url(../imgs/vr_omics_new.png) no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
 }
@@ -11812,4 +11822,22 @@ textarea.form-control {
 
 .image-invert{
   filter: invert(100%)
+}
+
+#backToTopButton {
+  display: none; /* Hide the button by default */
+  position: fixed; /* Fixed positioning for the button */
+  bottom: 20px; /* Adjust the distance from the bottom */
+  right: 20px; /* Adjust the distance from the right */
+  z-index: 1; /* Make sure the button appears above other content */
+  background-color: #6c757d; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 4px; /* Add rounded corners to the button */
+  padding: 10px 20px; /* Add padding to the button */
+  cursor: pointer; /* Change the cursor on hover */
+}
+
+#backToTopButton:hover {
+  background-color: #0056b3; /* Change background color on hover */
 }

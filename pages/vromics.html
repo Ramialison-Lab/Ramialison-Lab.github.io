@@ -18,6 +18,7 @@
     <!-- font icons -->
     <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
 	<link rel="stylesheet" href="../assets/css/leadmark.css">
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
@@ -36,9 +37,9 @@
                         <!-- FIXME: Insert missing download link! -->
                         <a href="  " class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics V2.0</a>
                     </li>         
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://figshare.com/s/b717041b5beaff929629">VR-Omics V1.0</a>
-                    </li>                     
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="vromics_legacy.html">VR-Omics V1.0</a>
+                    </li>                      -->
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
@@ -62,7 +63,7 @@
 
     <!-- Page Header -->
     <header class="header">
-        <div class="vromics">
+        <div class="vromicsv2">
             <div class="overlay">
                 <h1 class="subtitle">Visualisation and Analysis of Spatially Resolved Transcriptomics Data.</h1>
                 <h1 class="title">VR-Omics</h1>  
@@ -97,13 +98,14 @@
                         <p>Spatially resolved transcriptomics is an emerging class of Low-throughput technologies that enable biologists to systematically investigate spatiotemporal gene expression patterns.</p> 
                         <p>Upon data acquisition, one major hurdle is the subsequent interpretation and visualization of the datasets acquired. To address this challenge, we present a novel data visualization system with interactive functionalities in virtual reality, using an embedded automated workflow for analysis and data processing. The application is designed to help biologists to analyse and interpret spatially resolved transcriptomic datasets. Supported are various technologies such as Visium and Xenium by 10X Genomics, STOmics by BGI, MERFISH by VIZGEN or Tomo-seq. The system is implemented as a local 2D desktop application or as an immersive environment using head-mounted display virtual reality. This allows biologists to interact with the data in novel ways not previously possible, which includes visually exploring the gene expression patterns of an organ and comparing genes based on their 3D expression profiles. 
                         </p>
+                        <!-- FIXME: new download link here -->
                         <a href="https://figshare.com/s/b717041b5beaff929629" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics</a>
                 </div>
                 <div class="col-md-6 pl-md-5">
                     <div class="row">
                         <div class="col-6">
                             <!-- FIXME: Update new poster -->
-                            <img src="../assets/imgs/vromics_poster.png" alt="" class="w-150 shadow-sm">
+                            <img src="../assets/imgs/vromics_v2_poster.png" alt="" class="w-150 shadow-sm">
                         </div>
                     </div>
                 </div>
@@ -114,28 +116,39 @@
         <div class="container">
         <h1 id="vrcardiomics">Documentation</h1>
             <h5>Automated Workflow</h5>
-            <div>
-                <!-- FIXME: Remove STOmics? -->
-                <button type="button" class="btn btn-light"><a href="#aw_visium">Visium</a></button>
-                <button type="button" class="btn btn-light"><a href="#aw_xenium">Xenium</a></button>
-                <button type="button" class="btn btn-light"><a href="#aw_tomo">Tomo-Seq</a></button>
-                <button type="button" class="btn btn-light"><a href="#aw_stomics">STOmics</a></button>
-                <button type="button" class="btn btn-light"><a href="#aw_merfish">MERFISH</a></button>
-                <button type="button" class="btn btn-light"><a href="#aw_other">Custom data</a></button>
-            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a spatial platform
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#aw_visium" onclick="openDetails('aw_visium')">Visium</a>
+                    <a class="dropdown-item" href="#aw_xenium" onclick="openDetails('aw_xenium')">Xenium</a>
+                    <a class="dropdown-item" href="#aw_tomo" onclick="openDetails('aw_tomo')">Tomo-Seq</a>
+                    <a class="dropdown-item" href="#aw_stomics" onclick="openDetails('aw_stomics')">STOmics</a>
+                    <a class="dropdown-item" href="#aw_merfish" onclick="openDetails('aw_merfish')">MERFISH</a>
+                    <a class="dropdown-item" href="#aw_other" onclick="openDetails('aw_other')">Custom data</a>
+                </div>
+            </div>            
             <br>
             <h5>Quick Access Visualisation Features</h5>
-            <ul>
-                <li><a href="#vis_geneSearch">Gene Search Features</a></li>
-                <li><a href="#vis_locationInteraction">Location Interaction Features</a></li>
-                <li><a href="#vis_tissue">Tissue Overlay Features</a></li>
-                <li><a href="#vis_comparison">Explorative Comparison Features</a></li>
-                <li><a href="#vis_export">Export Features</a></li>
-                <li><a href="#vis_VR">Switch VR and Desktop Application</a></li>
-                <li><a href="#vis_parameters">Additional Parameters to Explore</a></li>
-                <li><a href="#vis_3dobject">3D Object alignment</a></li>
-                <li><a href="#vis_customisation">Customisation</a></li>
-            </ul>      
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select a feature
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#vis_geneSearch" onclick="openDetails('vis_geneSearch')">Gene Search Features</a>
+                    <a class="dropdown-item" href="#vis_locationInteraction" onclick="openDetails('vis_locationInteraction')">Location Interaction Features</a>
+                    <a class="dropdown-item" href="#vis_dimreduction" onclick="openDetails('vis_dimreduction')">Dimensionality Reduction Features</a>
+                    <a class="dropdown-item" href="#vis_cluster" onclick="openDetails('vis_cluster')">Cluster Features</a>
+                    <a class="dropdown-item" href="#vis_tissue" onclick="openDetails('vis_tissue')">Tissue Overlay Features</a>
+                    <a class="dropdown-item" href="#vis_comparison" onclick="openDetails('vis_comparison')">Explorative Comparison Features</a>
+                    <a class="dropdown-item" href="#vis_export" onclick="openDetails('vis_export')">Export Features</a>
+                    <a class="dropdown-item" href="#vis_VR" onclick="openDetails('vis_VR')">Switch VR and Desktop Application</a>
+                    <a class="dropdown-item" href="#vis_parameters" onclick="openDetails('vis_parameters')">Additional Parameters to Explore</a>
+                    <a class="dropdown-item" href="#vis_3dobject" onclick="openDetails('vis_3dobject')">3D Object alignment</a>
+                    <a class="dropdown-item" href="#vis_customisation" onclick="openDetails('vis_customisation')">Customisation</a>
+                </div>
+            </div>           
         </div>
     </section>   
 
@@ -150,7 +163,6 @@
             <details>
                 <summary><span style="font-size: 24px">VR-Omics Setup</span></summary>
                 <br>
-                <a id="aw_visium"></a>
                 <table class="table table-striped">
                     <!-- FIXME: Update the setup section to include the new version, keep this one as legacy version install -->
                     <tbody>
@@ -207,9 +219,10 @@
             <details open><summary> <span style="font-size: 24px">VR-Omics Automated Workflow</span></summary>
                 <br>
                 <!-- Visium -->
-                <a id="aw_visium"></a>
                 <details  class="details"><summary> <span style="font-size: 18px">Visium</span></summary>
-                        <details class="details sub"><summary><strong>Download Data</strong></summary> <a id="visium_download"></a>
+                    <details class="details sub"><summary><strong>Download Data</strong></summary> <a id="visium_download"></a>
+                            <a id="aw_visium"></a>
+
                             <table class="table table-striped">
                                 <tbody>
                                     <!-- Choose Download menu -->
@@ -246,11 +259,11 @@
                                             <div style="width: 600px;">
                                                 <figure>
                                                     <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_Download.png" id="vis_opt" style="max-width: 100%;">
-                                                    <figcaption>VR-Omics Visium menu.</figcaption>
+                                                    <figcaption><a href="#filter">Filter parameters.</a></figcaption>
                                                 </figure>   
                                                 <br>                           
                                             </div>    
-                                            <p>The data will be downloaded from the  <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and processed to be read in VR-Omics</p>               
+                                            <p></p>               
                                         </td>
                                     </tr>
                                     <!-- SVG analysis -->
@@ -261,6 +274,9 @@
                                                 <p>Tick the <span class="badge badge-pill badge-info">Spatially Variable Genes</span> box to perform spatial analysis.</p>  
                                         </td>
                                         <td>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_Download_svg.png" id="vis_opt" style="max-width: 100%;">
+                                            </figure>  
                                             <p><i>Spatially variable genes are genes that exhibit differences in expression levels across different regions or cell types within a tissue or organism.</i></p>                   
                                         </td>
                                     </tr>
@@ -272,8 +288,10 @@
                                             <p>Select <span class="badge badge-pill badge-info">Download</span> to download and process the dataset.</p>
                                         </td>
                                         <td>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_Download_download.png" id="vis_opt" style="max-width: 100%;">
+                                            </figure>  
                                             <p>The data will be downloaded from the  <a href="https://www.10xgenomics.com/resources/datasets">10X Genomics Resources Website</a> and processed to be read in VR-Omics</p>    
-                                            <p><i>Spatially variable genes are genes that exhibit differences in expression levels across different regions or cell types within a tissue or organism.</i></p>
                                             <p>The data will be stored in the VR-Omics folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code> To Visualise the data select the Visium Load function and select the whole folder from the Browse menu.</p>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
@@ -285,282 +303,293 @@
                     </details>
                     <!-- Load section collapsible -->
                     <details class="details sub"><summary><strong>Load data from local machine</strong></summary><a id="visium_load"></a>
-                        <br>
                         <!-- Load single slide -->
-                        <h2>Using a single Visium slide</h2>
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Load a single Visium dataset</td>
-                                    <td>
-                                        <ol>
-                                            <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
-                                            <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
-                                            <li>Click the <span class="badge badge-pill badge-info">Browse</span> button and search for the sample folder of the Visium slide. Select the main folder as shown in the figure. Only Data processed or downloaded with VR-Omics can be used, otherwise ensure the folder has <a href="#format">this format</a>.* </li>
-                                        </ol>
-                                    </td>
-                                    <td>
-                                        <p>* The folder will be in the right format if the sample was downloaded using the VR-Omics Automated Workflow or the Sample has been processed using the Automated Workflow beforehand.</p>
-                                        <figure>
-                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
-                                        </figure>  
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Select sample folder</td>
-                                    <!-- TODO: add example data path -->
-                                    <td>Select the sample folder (main folder of the dataset) in the Explorer menu and click <span class="badge badge-pill badge-info">Load</span>
-                                    </td>
-                                    <td>
-                                        <div style="width: 600px;">
+                        <details class="details sub"><summary><strong>Loading a single Visium slide</strong></summary><a id="visium_load_single"></a>
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                Stop: Make sure the sample has been <a href="#visium_process">processed</a> using the VR-Omics automated workflow before loading the slide!
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                                </button>
+                             </div>
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Load a single Visium dataset</td>
+                                        <td>
+                                            <ol>
+                                                <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                                <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                            </ol>
+                                        </td>
+                                        <td>
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single.png" style="max-width: 100%;">
-                                            </figure>  
-                                        </div> 
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_options_load.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Select sample folder</td>
+                                        <!-- TODO: add example data path -->
+                                        <td>
+                                            <ol>
+                                                <li>Select the main folder of the dataset </li>
+                                                <li>Click <span class="badge badge-pill badge-info">Load</span> to confirm</li>
+                                            </ol>
+                                        </td>
+                                        <td>
+                                            <div style="width: 600px;">
+                                                <figure>
+                                                    <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single.png" style="max-width: 100%;">
+                                                    <figcaption>Select the main folder of the processed Visium sample.</figcaption>
+                                                </figure>  
+                                                <figure>
+                                                    <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                                    <figcaption>Samples processed using the VR-Omics workflow can be found in the VR-Omics folder as shown above. </figcaption>
+                                                </figure>  
+                                            </div> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Confirm selection</td>
+                                        <td>
+                                            <ol>
+                                                <li>The selected sample's tissue image will be shown.</li>
+                                                <li>Expand the tissue image using the expand button.</li>
+                                                <li>Delete the sample by clicking the <span class="badge badge-pill badge-info">🗑</span> button.</li>
+                                                <li>Select the sample by clicking <span class="badge badge-pill badge-info">Align</span></li>
+                                            </ol>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Confirm selection</td>
-                                    <td>
-                                        <p>The sample will be shown in a container showing the tissue image that can be expand by clicking on the button in the image.</p>
-                                        <p>Select the sample by clicking <span class="badge badge-pill badge-info">Align</span></p>
-                                </td>
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single_container.png" style="max-width: 100%;">
                                             </figure>  
                                         </div> 
-                                        <p>If the tissue image wasn't found a default VR-Omics placeholder will appear. This means the file wasn't identified. Please ensure that the respective file is named <code>tissue_hires_image.png</code> and that no other file in the directory has the same name.</p>
-                                        <p>The dataset can be visualised and explored without a tissue image with some limited functionalities. Therefore, skip the Alignment process by clicking <span class="badge badge-pill badge-info">Align</span> and then <span class="badge badge-pill badge-info">Go!</span> without changing any of the settings.</p>
+                                        <p>If the tissue image wasn't found a default VR-Omics placeholder will be shown. To fix this, please ensure that the respective file within the sample folder is named <code>tissue_hires_image.png</code></p>
+                                        <p>The dataset can be visualised and explored without using the tissue image with some limited functionalities.</p>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Rotate the samples in the 3D mapping tool</td>
-                                    <td>
-                                        <p>The dropdown menu shows the name of the selected sample folder</p>
-                                        <p>Use the slider to set the transparency of the tissue image.</p>
-                                        <p>Use the <span class="badge badge-pill badge-info">+</span> Button to rotate the slice clockwise or the <span class="badge badge-pill badge-info">-</span> Button to rotate it counter clockwise.</p>
-                                        <p>This allows aligning the samples if they have been misplaced or rotated on the capture area.</p>
-                                        <p>The slices can still be rotated in the VR-Omics Visualiser later to further adjust them.</p>
-                                        <p>Click the <span class="badge badge-pill badge-info">Go!</span> button if all adjustments are made to visualise the combined dataset in the VR-Omics Visualiser.</p>
-                                </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Rotate the samples in the 3D mapping tool</td>
+                                        <td>
+                                            <ol>
+                                                <li>Use the slider to set the transparency of the tissue image.</li>
+                                                <li>Use the <span class="badge badge-pill badge-info">+</span> or <span class="badge badge-pill badge-info">-</span> Button to rotate the slide.</li>
+                                                <li>Leave the distance field blank.</li>
+                                                <li>Click the <span class="badge badge-pill badge-info">Go!</span> button if all adjustments are made to visualize the combined dataset in the VR-Omics Visualizer.</li>
+                                            </ol>                                        
+                                    </td>
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single_rotate.png" style="max-width: 100%;">
                                             </figure>  
                                         </div> 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Skip the distance input field</td>
-                                    <td>
-                                        <p>Ignore the text box in the bottom left for the distances if using a single Visium slide.</p>
-                                        <p>Click the <span class="badge badge-pill badge-info">Go!</span> button if all adjustments are made to visualise the combined dataset in the VR-Omics Visualiser.</p>
-                                </td>
-                                <td>
-                                    <div style="width: 600px;">
-                                        <figure>
-                                            <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single_rotate.png" style="max-width: 100%;">
-                                        </figure>  
-                                    </div> 
-                                </td>                            </tr>
-                            </tbody>
-                        </table> 
+                                    </td>                            </tr>
+                                </tbody>
+                            </table> 
+                        </details>
                         <!-- Join/Concat data in 2D space -->
-                        <h2>Joining multiple Visium slides in 2D space</h2>
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Load multiple Visium datasets</td>
-                                    <td>
-                                        <ol>
-                                            <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
-                                            <!-- FIXME: check if button is called Concat -->
-                                            <li>Select <span class="badge badge-pill badge-info">Concat</span></li> 
-                                            <!-- FIXME: Update format of folder structure Visium slides. -->
-                                            <li>Click the <span class="badge badge-pill badge-info">Browse</span> button and search for the sample folders of the Visium slice (Ensure the folder has <a href="#format">this format</a>.)* </li>
-                                        </ol>
-                                    </td>
-                                    <td>
-                                        <!-- FIXME: Add main menu showing Visium Concat option -->
-                                        <p>* The folder will be in the right format if the sample was downloaded or processed using the VR-Omics Automated Workflow.</p>
-                                        <figure>
-                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
-                                        </figure>  
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Select sample folders</td>
-                                    <!-- FIXME: add example data path -->
-                                    <td>Select all sample folders (main folder of the dataset) that need to be joined in the Explorer menu and click <span class="badge badge-pill badge-info">Load</span>
-                                    </td>
-                                    <td>
-                                        <div style="width: 600px;">
+                        <details class="details sub"><summary><strong>Concat multiple Visium slides in 2D space</strong></summary><a id="visium_load_concat"></a>
+                            <h2></h2>
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Select the Concat menu</td>
+                                        <td>
+                                            <ol>
+                                                <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                                <li>Select <span class="badge badge-pill badge-info">Concat</span></li> 
+                                            </ol>
+                                        </td>
+                                        <td>
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_selected.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_options_concat.png" style="max-width: 100%;">
                                             </figure>  
-                                        </div> 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Selection of samples</td>
-                                    <td>
-                                        <ol>
-                                            <li>Each sample will be shown in an individual container, showing the respective stained tissue image, the name of the sample.</li>
-                                            <li>Delete a sample by pressing the delete button <span class="badge badge-pill badge-info">🗑</span>. The tissue image can be expanded by clicking the expand button on the image.</p></li>
-                                            <!-- FIXME: Check if the button is called Concat -->
-                                            <li>Click <span class="badge badge-pill badge-info">Concat</span> to confirm all selected files.</li>
-                                        </ol>
-                                    </td>
-                                    <td>
-                                        <div style="width: 600px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Select the Visium samples to merge</td>
+                                        <td>
+                                            <ol>
+                                                <li>Click <span class="badge badge-pill badge-info">Browse</span></li>
+                                                <li>From the Explorer find the main folders of the datasets to merge.</li> 
+                                                <li>Click <span class="badge badge-pill badge-info">Load</span> to load the samples.</li>
+                                            </ol>
+                                        </td>
+                                        <td>
                                             <figure>
-                                                <!-- FIXME: Update this figure to show concat containers -->
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_containers.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_select.png" style="max-width: 100%;">
                                             </figure>  
-                                        </div> 
-                                        <p>If the tissue image wasn't found a default VR-Omics placeholder will appear. This means the file wasn't identified. Please ensure that the respective file is named <code>tissue_hires_image.png</code>, to allow the manual alignment process.</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Rotate the samples in the 3D mapping tool</td>
-                                    <td>
-                                        <!-- FIXME: Add the missing steps explaining how the files are moved, roated and confirmed. -->
-                                        <p>Align the H&E stains</p>
-                                    </td>
-                                    <td>
-                                        <div style="width: 600px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Check the selected samples</td>
+                                        <td>
+                                            <ol>
+                                                <li>The selected samples will be shown</li>
+                                                <li>Expand the tissue image or delete a sample using the <span class="badge badge-pill badge-info">🗑</span> button.</li> 
+                                                <li>Click <span class="badge badge-pill badge-info">Concat</span> to confirm the selection.</li>
+                                            </ol>
+                                        </td>
+                                        <td>
                                             <figure>
-                                                <!-- FIXME: Figure to show concat slides -->
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_roate.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_containers.png" style="max-width: 100%;">
+                                                <figcaption>The order of the samples is not important for the following steps.</figcaption>
                                             </figure>  
-                                        </div> 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Processing the joint dataset using the AW.</td>
-                                    <td>
-                                        <!-- FIXME: Double check those steps and update the figures -->
-                                        <p>Select the filter parameters or leave the selections blank to skip filtering</p>
-                                        <p>Select Spatially Variable Genes to spatially analyse the joint dataset.</p>
-                                        <p>Click <span class="badge badge-pill badge-info">Go</span> to run the analysis.</p>
-                               </td>
-                                    <td>
-                                        <div style="width: 600px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Arrange the slides</td>
+                                        <td>
+                                            <ol>
+                                                <li>Arrange the slides by using the mouse.</li>
+                                                <li>Drag a sample by using left click to move the sample into position</li>
+                                                <li>Hold down the left mouse button and click the right mouse button once to rotate a sample by 90 degrees.</li>
+                                                <li>Click <span class="badge badge-pill badge-info">Concat</span> to confirm.</li>
+                                            </ol>
+                                        </td>
+                                        <td>
                                             <figure>
-                                                <!-- FIXME: Update the figure to show the filtering of the joint dataset -->
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_rotate_showall.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_arranged.png" style="max-width: 100%;">
+                                                <figcaption>Ensure that no samples overlap with each other.</figcaption>
                                             </figure>  
-                                            <!-- FIXME: Add a paragraph explaining where the dataset will be stored. -->
-                                        </div> 
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Processing the joint dataset</td>
+                                        <td>
+                                            <ol>
+                                                <li>(Optional) Enter filter parameters to filter the joint dataset or leave fields blank.</li>
+                                                <li>(Optional) Select T-SNE and UMAP analysis</li>
+                                                <li>(Optional) Select SVG analysis to run spatial analysis.</li>
+                                                <li>Click <span class="badge badge-pill badge-info">Process</span> to confirm.</li>
+                                            </ol>
+                                        </td>
+                                        <td>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_filter.png" style="max-width: 100%;">
+                                                <figcaption>Click here for more information on <a href="#filter">filter parameters.</a> Selecting T-SNE and UMAP as well as SVG analysis increases processing time of the sample.</figcaption>
+                                            </figure>  
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            <br>
+                        </details>
                         <!-- Load multiple slides in 3D space -->
-                        <h2>Loading multiple Visium slides in 3D</h2>
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Load a single Visium dataset</td>
-                                    <td>
-                                        <ol>
-                                            <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
-                                            <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
-                                            <li>Click the <span class="badge badge-pill badge-info">Browse</span> button and search for the sample folder of the Visium slide. Select the main folder as shown in the figure. Only Data processed or downloaded with VR-Omics can be used, otherwise ensure the folder has <a href="#format">this format</a>.* </li>
-                                        </ol>
-                                    </td>
-                                    <td>
-                                        <p>* The folder will be in the right format if the sample was downloaded using the VR-Omics Automated Workflow or the Sample has been processed using the Automated Workflow beforehand.</p>
-                                        <figure>
-                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
-                                        </figure>  
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Select sample folder</td>
-                                    <!-- TODO: add example data path -->
-                                    <td>Select the sample folder (main folder of the dataset) in the Explorer menu and click <span class="badge badge-pill badge-info">Load</span>
-                                    </td>
-                                    <td>
-                                        <div style="width: 600px;">
+                        <details class="details sub"><summary><strong>Loading multiple Visium slides in 3D</strong></summary><a id="visium_load_multiple"></a>
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                Stop: Make sure the sample has been <a href="#visium_process">processed</a> using the VR-Omics automated workflow before loading the slide!
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <br>
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Load multiple Visium datasets in 3D</td>
+                                        <td>
+                                            <ol>
+                                                <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                                <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                            </ol>
+                                        </td>
+                                        <td>
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_options_load.png" style="max-width: 100%;">
                                             </figure>  
-                                        </div> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Select sample folders</td>
+                                        <!-- TODO: add example data path -->
+                                        <td>
+                                            <ol>
+                                                <li>Click <span class="badge badge-pill badge-info">Browse</span></li>
+                                                <li>Using the explorer select the main folders of the samples to load.</li>
+                                                <li>Click <span class="badge badge-pill badge-info">Load</span> to confirm selection.</li>
+                                            </ol>
+                                            
+                                        </td>
+                                        <td>
+                                            <div style="width: 600px;">
+                                                <figure>
+                                                    <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_selected.png" style="max-width: 100%;">
+                                                </figure>  
+                                                <figure>
+                                                    <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                                    <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
+                                                </figure>  
+                                            </div> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Confirm selection</td>
+                                        <td>
+                                            <ol>
+                                                <li>Tissue images can be expanded.</li>
+                                                <li>Change the order of the samples using <span class="badge badge-pill badge-info">˄</span> or <span class="badge badge-pill badge-info">˅</span>.</li>
+                                                <li>Remove samples by clicking <span class="badge badge-pill badge-info">🗑</span></li>
+                                                <li>Confirm selection and order by clicking <span class="badge badge-pill badge-info">Align</span></li>
+                                            </ol>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Confirm selection</td>
-                                    <td>
-                                        <p>The sample will be shown in a container showing the tissue image that can be expand by clicking on the button in the image.</p>
-                                        <p>Select the sample by clicking <span class="badge badge-pill badge-info">Align</span></p>
-                                </td>
-                                    <td>
-                                        <div style="width: 600px;">
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single_container.png" style="max-width: 100%;">
-                                            </figure>  
-                                        </div> 
-                                        <p>If the tissue image wasn't found a default VR-Omics placeholder will appear. This means the file wasn't identified. Please ensure that the respective file is named <code>tissue_hires_image.png</code> and that no other file in the directory has the same name.</p>
-                                        <p>The dataset can be visualised and explored without a tissue image with some limited functionalities. Therefore, skip the Alignment process by clicking <span class="badge badge-pill badge-info">Align</span> and then <span class="badge badge-pill badge-info">Go!</span> without changing any of the settings.</p>
+                                        <td>
+                                            <div style="width: 600px;">
+                                                <figure>
+                                                    <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_containers.png" style="max-width: 100%;">
+                                                </figure>  
+                                            </div> 
+                                            <p>If the tissue image wasn't found a default VR-Omics placeholder will appear. To fix this, please ensure that the respective file is named <code>tissue_hires_image.png</code>in the directory.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Rotate the samples in the 3D mapping tool</td>
+                                        <td>
+                                            <ol>
+                                                <li>Select a sample from the dropdown menu.</li>
+                                                <li>Adjust transparency using the slider for the selected tissue image.</li>
+                                                <li>Rotate the sample with the <span class="badge badge-pill badge-info">+</span> or <span class="badge badge-pill badge-info">-</span> buttons.</li>
+                                                <li>Enter slide distances separated by commas.</li>
+                                                <li>Click <span class="badge badge-pill badge-info">Go!</span> to visualize the combined dataset in the VR-Omics Visualizer.</li>
+                                            </ol>                                                                                    
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Rotate the samples in the 3D mapping tool</td>
-                                    <td>
-                                        <p>The dropdown menu shows the name of the selected sample folder</p>
-                                        <p>Use the slider to set the transparency of the tissue image.</p>
-                                        <p>Use the <span class="badge badge-pill badge-info">+</span> Button to rotate the slice clockwise or the <span class="badge badge-pill badge-info">-</span> Button to rotate it counter clockwise.</p>
-                                        <p>This allows aligning the samples if they have been misplaced or rotated on the capture area.</p>
-                                        <p>The slices can still be rotated in the VR-Omics Visualiser later to further adjust them.</p>
-                                        <p>Click the <span class="badge badge-pill badge-info">Go!</span> button if all adjustments are made to visualise the combined dataset in the VR-Omics Visualiser.</p>
-                                </td>
-                                    <td>
-                                        <div style="width: 600px;">
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single_rotate.png" style="max-width: 100%;">
-                                            </figure>  
-                                        </div> 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Skip the distance input field</td>
-                                    <td>
-                                        <p>Ignore the text box in the bottom left for the distances if using a single Visium slide.</p>
-                                        <p>Click the <span class="badge badge-pill badge-info">Go!</span> button if all adjustments are made to visualise the combined dataset in the VR-Omics Visualiser.</p>
-                                </td>
-                                <td>
-                                    <div style="width: 600px;">
-                                        <figure>
-                                            <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single_rotate.png" style="max-width: 100%;">
-                                        </figure>  
-                                    </div> 
-                                </td>                            </tr>
-                            </tbody>
-                        </table>
+                                        <td>
+                                            <div style="width: 600px;">
+                                                <figure>
+                                                    <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_rotate_showall.png" style="max-width: 100%;">
+                                                </figure>  
+                                            </div> 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
 
                     </details>
                     <!-- Process section collapsible -->
                     <details class="details sub"><summary><strong>Process</strong></summary><a id="visium_process"></a>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            This step needs to be performed for every dataset that was not downloaded using the <a href="#visium_download">VR-Omics Download</a> option.                            
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -574,30 +603,45 @@
                                         <ol>
                                             <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
                                             <li>Select <span class="badge badge-pill badge-info">Process</span></li>
-                                            <li>Click <span class="badge badge-pill badge-info">Browse</span> and select the visium folder from your local machine.</li>
-                                            <li>The folder must contain a <i>spatial</i> folder and a <i>h5</i> file named <code>filtered_feature_bc_matrix.h5</code>.</li>
-                                            <li>Select the <i>Skip Filter Step</i> toggle only if you wish to skip the filter and SVG step and only prepare the data for the Visualiser.</li>
-                                            <li>Click the <span class="badge badge-pill badge-info">Next</span> button to continue.</li>
-                                            <!-- TODO: add data path -->
-                                            <li>The output will be saved in the VR-Omics directory. NAvigate to where the VR-Omics software was downloaded. From here navigate to <code>Assets/PythonFiles</code> The output can be visualised using the <a href="#visium_load">Load</a> feature.</li>
-                                        </ol>
+                                       </ol>
                                     </td>
                                     <td>
-                                        <p>This step needs to be performed for every dataset that was not downloaded using the <a href="#visium_download">VR-Omics Download</a> option.</p>
                                         <div style="width: 600px;">
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_process_only.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_options_process.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
-                                        <p>Optionally, the <span class="badge badge-pill badge-info">Skip Filter Step</span> option can be used if the dataset does not need to be filtered.</p>
-                                        <p>The output will be saved in the VR-Omics folder</p>
-                                        <figure>
-                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
-                                        </figure>  
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
+                                    <td>
+                                        <p>Process Visium dataset from local machine</p>
+                                        <p>Combinable with: <span class="badge badge-pill badge-danger">None</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <ol>
+                                            <li>Click <span class="badge badge-pill badge-info">Browse</span> and select the visium folder from your local machine.</li>
+                                            <li>(Optional) Select the <i>Skip Filter Step</i> toggle only if you wish to skip the filter and SVG step.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Next</span> to continue.</li>
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_process_only.png" style="max-width: 100%;">
+                                                <figcaption>The folder must contain a <i>spatial</i> folder and a <i>h5</i> file named <code>filtered_feature_bc_matrix.h5</code></figcaption>
+                                            </figure> 
+                                        </div> 
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
+                                        </figure>    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
                                     <td>
                                         <p>Process and Filter Visium dataset from local machine</p>
                                         <p>Combinable with: <span class="badge badge-pill badge-success">Spatially Variable Genes</span>
@@ -605,14 +649,7 @@
                                     </td>
                                     <td>
                                         <ol>
-                                            <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
-                                            <li>Select <span class="badge badge-pill badge-info">Process</span></li>
-                                            <li>Click <span class="badge badge-pill badge-info">Browse</span> and select the visium folder from your local machine.</li>
-                                            <li>The folder must contain a <i>spatial</i> folder and a <i>h5</i> file named <code>filtered_feature_bc_matrix.h5</code>.</li>
-                                            <li>Unselect the <i>Skip Filter Step</i> toggle if you wish to filter and prepare the data for the Visualiser.</li>
-                                            <li>Click the <span class="badge badge-pill badge-info">Next</span> button to continue.</li>   
                                             <li>Select the <a href="#filter">filter parameters</a>.</li> 
-                                            <li>Optionally, create the output plots by selecting the <code>Include Plots</code> toggle.</li>
                                             <li>Optionally, perform spatial analysis by selecting the <code>SVG Analysis</code> toggle.</li>                               
                                         </ol>
                                     </td>
@@ -647,7 +684,7 @@
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_options.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_options_demo.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
                                     </td>
@@ -663,7 +700,6 @@
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/C18_demo.png" style="max-width: 100%;">
                                             </figure> 
-                                            <p><i>The cluster data is visualised in the screenshot, this is not the default.</i></p>
                                         </div> 
                                     </td>
                                 </tr>
@@ -725,23 +761,115 @@
                             </tbody>
                         </table>
                         <div style="width: 600px;">
-                            <figure>
-                                <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_Download.png" style="max-width: 100%;">
-                            </figure> 
                             <p>Further information can be found in the <a href="https://scanpy-tutorials.readthedocs.io/en/latest/spatial/basic-analysis.html">Scanpy spatial analysis documentation.</a></p>
                         </div> 
                     </details>
                     <!-- Folder required format -->
                     <details class="details sub"><summary>Visium folder required format</summary>
                         <a id="format"></a>
-                        <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_file_format.png" alt="" class="w-50 shadow-sm">
-                        <p>Please ensure this structure of your Visium data to use the VR-Omics Visualiser. This structure will automatically be generated by all sample datasets that are either <a href="#visium_download">downloaded</a> or <a href="#visium_process">processed</a> using the VR-Omics Automated Workflow.
+                        <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_file_format.png" alt="" class="w-100 shadow-sm">
+                        <p>For samples not <a href="#visium_download">downloaded</a> or <a href="#visium_process">processed</a> using the VR-Omics Automated Workflow, ensure this folder structure. Further descriptions of the files can be found below. Alternatively, they can be uploaded using the custom data option with limited features.
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Required file name ending</th>
+                                        <th scope="col">Full name (VR-Omics)</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Required</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        <code>tissue_hires_image.png</code>
+                                    </td>
+                                    <td>
+                                        <code>tissue_hires_image.png</code>
+                                    </td>
+                                    <td>
+                                        The high-resolution tissue image (2000 x 2000 pixels) as provided by 10x genomics.
+                                    </td>
+                                    <td>false but impacts features</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>Tissue_positions_list.csv</code>
+                                    </td>
+                                    <td>
+                                        <code>Tissue_positions_list.csv</code>
+                                    </td>
+                                    <td>
+                                        CSV file as provided by 10x genomics. File does not contain headers. 1. Spot IDs; 2. spot on tissue; 3. + 4. row and column of spot; 5. + 6. X and Y coordinates of spot;
+                                    </td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>transposed.csv</code>
+                                    </td>
+                                    <td>
+                                        <code>outs_transposed.csv</code>
+                                    </td>
+                                    <td>
+                                        CSV file containing gene counts per spot. Header contains spot IDs. First column contains gene names. Each row contains gene count information per spots (columns).
+                                    </td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>metadata.csv</code>
+                                    </td>
+                                    <td>
+                                        <code>outs_metadata.csv</code>
+                                    </td>
+                                    <td>
+                                        Header: <code>in_tissue</code>, <code>array_row</code>, <code>array_col</code>, <code>n_genes_by_counts</code>, <code>log1p_n_genes_by_counts</code>, <code>total_counts</code>, <code>log1p_total_counts</code>, <code>pct_counts_in_top_50_genes</code>, <code>pct_counts_in_top_100_genes</code>, <code>pct_counts_in_top_200_genes</code>, <code>pct_counts_in_top_500_genes</code>, <code>total_counts_mt</code>, <code>log1p_total_counts_mt</code>, <code>pct_counts_mt</code>, <code>n_counts</code>, <code>n_genes</code>, <code>clusters</code>
+                                    </td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>gene_panel_IDs.csv</code>
+                                    </td>
+                                    <td>
+                                        <code>outs_gene_panel_IDs.csv</code>
+                                    </td>
+                                    <td>
+                                        CSV file with one column header name <code>gene</code> listing all gene names in the dataset.
+                                    </td>
+                                    <td>true</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>svgtoggle.csv</code>
+                                    </td>
+                                    <td>
+                                        <code>outs_svgtoggle.csv</code>
+                                    </td>
+                                    <td>
+                                        <code>g</code>, <code>FSV</code>, <code>M</code>, <code>g</code>, <code>l</code>, <code>max_delta</code>, <code>max_ll</code>, <code>max_mu_hat</code>, <code>max_s2_t_hat</code>, <code>model</code>, <code>n</code>, <code>s2_FSV</code>, <code>s2_logdelta</code>, <code>time</code>, <code>BIC</code>, <code>max_ll_null</code>, <code>LLR</code>, <code>pval</code>, <code>qval</code>
+                                    </td>
+                                    <td>false</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>obsm.csv</code>
+                                    </td>
+                                    <td>
+                                        <code>outs_obsm.csv</code>
+                                    </td>
+                                    <td>
+                                        1. column spot IDS. 2. + 3. Spot coordinates in pixels. Followed by a variable number of columns for X_PCA values, UMAP X and Y coordinates, and TSNE X and Y coordinates.
+                                    </td>
+                                    <td>false</td>
+                                </tr>
+                            </table>
+                            
                     </details>
                 </details>
                 <!-- XENIUM -->
-                <a id="aw_xenium"></a>
                 <details class="details"><summary> <span style="font-size: 18px">Xenium</span></summary>
                     <details class="details sub"><summary><strong>Process</strong></summary><a id="xenium_process"></a>
+                        <a id="aw_xenium"></a>
                         <h2>Process Xenium data</h2>
                         <table class="table table-striped">
                             <tbody>
@@ -766,11 +894,14 @@
                                     <th scope="row">2</th>
                                     <td>Select the Xenium files</td>
                                     <td>
-                                        <li>Select the cell feature matrix <code>.h5</code> file of the Xenium data using <span class="badge badge-pill badge-info">Browse</span>.</li>
-                                        <li>Select the cells <code>csv</code> file of the Xenium data using <span class="badge badge-pill badge-info">Browse</span>.</li>
-                                        <li>Optionally select a <code>Min Count</code> value to filter the data</li>
-                                        <li>Optionally select a <code>Min Cells</code> value to filter the data</li>
-                                        <li>Select the <code>Run Full Analysis</code> toggle if you want to perform additional spatial analysis (Moran Results)</li>
+                                        <ol>
+                                            <li>Select the cell feature matrix <code>.h5</code> file using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>Select the cells <code>csv</code> file using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>(Optional) select filter parameters or leave blank.</li>
+                                            <li>Select the <code>Run SVG Analysis</code> toggle to perform spatial analysis (Moran Results)</li>
+                                            <li>Select <code>T-SNE & UMAP</code> toggle.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Process</span> to confirm.</li>
+                                        </ol>
                                     </td>
                                     <td>
                                         <div style="width: 600px;">
@@ -778,26 +909,7 @@
                                                 <img src="../assets/imgs/Documentation/Xenium/xenium_process.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
-                                        <p>Only one public dataset was available during development of VR-Omics</p>
-                                        <p>The dataset can be downloaded from <a href="https://www.10xgenomics.com/resources">10X Genomics.</a></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Confirm selection</td>
-                                    <td>
-                                        <p>Click <span class="badge badge-pill badge-info">Process</span> to process the data. </p>
-                                        <p>The processed data will be saved in the VR-Omics directory. From the directory navigate to <code>Assets/PythonFiles/</code> the folder starts with <code>Xenium_output_...</code>.</p>
-                                        <p>Select the whole folder containing <i>Xenium</i> for the Upload to the Visualiser</p>
-                                    </td>
-                                    <td>
-                                        <div style="width: 600px;">
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/Xenium/xenium_process.png" style="max-width: 100%;">
-                                            </figure> 
-                                        </div> 
-                                        <p>The process step can take a couple of minutes depending on the size of the dataset and the computational power of the computer used.</p>
-                                        <p>Once the data was processed this step can be skipped and the data can be visualised using the <a href="#xenium_load">Xenium load</a> option.</p>
+                                        <p>Selecting SVG Analysis and/or T-SNE/UMAP will increase processing time of the sample.</p>
                                         <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
                                         <figure>
                                             <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
@@ -829,22 +941,24 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Select the Xenium files</td>
+                                    <td>Select the Xenium sample folder</td>
                                     <td>
-                                        <p>Select the Xenium folder <a href="#xenium_process">processed</a> with the VR-Omics AW (highlighted in green in the picture) using <span class="badge badge-pill badge-info">Browse</span>.</p>
+                                        <ol>
+                                            <li>Select <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Using the explorer select the main folder of the processed Xenium folder.</li>
+                                        </ol>
                                     </td>
-                                    <td>
+                                    <td>                                        
                                         <div style="width: 600px;">
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Xenium/xenium_load.png" style="max-width: 100%;">
-                                                <p>The data set can be found in the VR-Omics directory. Navigate from there to <code>VR-Omics/Assets/PythonFiles/sample</code> select the whole folder as shown in the picture</p>
-                                                <figure>
-                                                    <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
-                                                </figure>  
                                             </figure> 
+                                            <p>Select the Xenium folder <a href="#xenium_process">processed</a> with the VR-Omics AW (highlighted in green in the picture) using <span class="badge badge-pill badge-info">Browse</span>.</p>
+                                            <p>The data set can be found in the VR-Omics directory. Navigate from there to <code>VR-Omics/Assets/PythonFiles/sample</code> select the whole folder as shown in the picture</p>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure>  
                                         </div> 
-                                        <p>Only one public dataset was available during development of VR-Omics</p>
-                                        <p>The dataset can be downloaded from <a href="https://www.10xgenomics.com/resources">10X Genomics.</a></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -856,7 +970,7 @@
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Xenium/xenium_load.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Xenium/xenium_load_vis.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
                                         <p>Ensure the data has been processed before visualising it using the <a href="#xenium_process">Process</a> function.</p>
@@ -867,9 +981,9 @@
                     </details>
                 </details>
                 <!-- Tomo-Seq -->
-                <a id="aw_tomo"></a>
                 <details class="details"><summary> <span style="font-size: 18px">Tomo-Seq</span></summary>
                     <details class="details sub"><summary><strong>Load</strong></summary><a id="tomo_load"></a>
+                        <a id="aw_tomo"></a>
                         <h2>Load Tomo-Seq data</h2>
                         <table class="table table-striped">
                             <tbody>
@@ -892,17 +1006,45 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Select the Tomo-Seq files</td>
+                                    <td>Select the Tomo-Seq folder</td>
                                     <td>
-                                        <li>Select the gene expression <code>.csv</code> file in AP* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
-                                        <li>Select the gene expression <code>.csv</code> file in VD* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
-                                        <li>Select the gene expression <code>.csv</code> file in LR* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
-                                        <li>Select the folder containing the reconstructed gene expression <code>.txt</code> files using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                        <ol>
+                                            <li>Select <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Choose the main folder of the Tomo-Seq data using the Explorer.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Visualise</span> to confirm</li>
+                                        </ol>
                                     </td>
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Tomo-seq/tomo_load.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Tomo-seq/tomo_load_folder.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div>                                         
+                                        <p>* AP = anterior to posterior, VD = ventral to dorsal, and LR = left to right </p>
+                                        <p>The 3D reconstruction of the gene expression is explained in <a href="https://doi.org/10.1016/j.cell.2019.11.025"><i>Asp et al.</a> in <a href="https://www.cell.com/cell/fulltext/S0092-8674(14)01226-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867414012264%3Fshowall%3Dtrue#supplementaryMaterial">Supplementary Data S2.</a> </i></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Select the Tomo-Seq files manually</td>
+                                    <td>
+                                        <ol>
+                                            <li>Click <span class="badge badge-pill badge-info">Manual File-Selection</span></li>
+                                            <li>Select the AP gene expression <code>.csv</code> file in AP* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>Select the LR gene expression <code>.csv</code> file in VD* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>Select the VD gene expression <code>.csv</code> file in LR* cutting direction using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>(Optional) Select a bitmask.txt file using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>Select the folder containing the reconstructed gene expression <code>.txt</code> files using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Visualise</span> to confirm.</li>
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Tomo-seq/tomo_load_manual_full.png" style="max-width: 100%;">
+                                            </figure> 
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Tomo-seq/tomo_load_full.png" style="max-width: 100%;">
                                             </figure> 
                                         </div>                                         
                                         <p>* AP = anterior to posterior, VD = ventral to dorsal, and LR = left to right </p>
@@ -914,9 +1056,10 @@
                     </details>
                 </details>
                 <!-- STOmics -->
-                </span><a id="aw_stomics"></a>
                 <details  class="details"><summary> <span style="font-size: 18px">STOmics</summary>
                     <details class="details sub"><summary><strong>Process</strong></summary><a id="stomics_process"></a>
+                    </span><a id="aw_stomics"></a>
+
                         <h2>Process STOmics data</h2>
                         <table class="table table-striped">
                             <tbody>
@@ -1020,9 +1163,9 @@
                     </details>
                 </details>
                 <!-- MERFISH -->
-                <a id="aw_merfish"></a>
                 <details  class="details"><summary> <span style="font-size: 18px">MERFISH</span></summary>
                     <details class="details sub"><summary><strong>Process</strong></summary><a id="merfish_process"></a>
+                        <a id="aw_merfish"></a>
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -1037,7 +1180,7 @@
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Merfish/merfish_options.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_options_process.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
                                     </td>
@@ -1046,11 +1189,15 @@
                                     <th scope="row">2</th>
                                     <td>Select the MERFISH files</td>
                                     <td>
-                                        <li>Select the Vizgen counts file <code>.csv</code> using <span class="badge badge-pill badge-info">Browse</span></li>.
-                                        <li>Select the Vizgen cell_metadata <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
-                                        <li>Select the Vizgen detected_transcripts <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
-                                        <li>Optionally, enter filter parameters</li>
-                                        <li>Optionally, select the <code>Run Full Analysis</code> toggle to include spatial analysis (Moran Results)</li>
+                                        <ol>
+                                            <li>Select the Vizgen counts file <code>.csv</code> using <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Select the Vizgen cell_metadata <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Select the Vizgen detected_transcripts <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>(Optional) Enter filter parameters or leave fields blank.</li>
+                                            <li>(Optional) Select the <code>Run SVG Analysis</code> toggle to include spatial analysis (Moran Results)</li>
+                                            <li>(Optional) Select the <code>T-SNE & UMAP</code> toggle</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Process</span> to confirm</li>
+                                        </ol>
                                 </td>
                                     <td>
                                         <div style="width: 600px;">
@@ -1083,7 +1230,7 @@
                                     <td>
                                         <div style="width: 600px;">
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Merfish/merfish_options.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_options_load.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
                                     </td>
@@ -1092,7 +1239,11 @@
                                     <th scope="row">2</th>
                                     <td>Select the MERFISH files</td>
                                     <td>
-                                        <li>Select the MERFISH sample folder processed with the VR-Omics AW Process function <span class="badge badge-pill badge-info">Browse</span></li>.
+                                        <ol>
+                                            <li>Select <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Select the MERFISH sample folder processed using the VR-Omics AW</li>
+                                            <li>Select <span class="badge badge-pill badge-info">Visualise</span> to confirm.</li>
+                                        </ol>
                                 </td>
                                     <td>
                                         <div style="width: 600px;">
@@ -1112,9 +1263,9 @@
                     </details>
                 </details>            
                 <!-- Custom -->
-                <a id="aw_other"></a>
                 <details  class="details"><summary> <span style="font-size: 18px">Custom data</span></summary>
                     <details class="details sub"><summary><strong>Load</strong></summary><a id="other_load"></a>
+                        <a id="aw_other"></a>
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -1138,9 +1289,9 @@
                                     <th scope="row">2</th>
                                     <td>Select the Custom data files</td>
                                     <td>
-                                        <li>Select the custom gene expression* <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
-                                        <li>Select the custom meta data** <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>.
-                                        <li>Optional: If the dataset contains three dimensions (X,Y, and Z) move the slider with the <span class="badge badge-pill badge-info">2D</span> label to the right.</li>.
+                                        <li>Select the custom gene expression* <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>
+                                        <li>Select the custom meta data** <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span></li>
+                                        <li>Optional: If the dataset contains three dimensions (X,Y, and Z) move the slider with the <span class="badge badge-pill badge-info">2D</span> label to the right.</li>
                                 </td>
                                     <td>
                                         <div style="width: 600px;">
@@ -1156,7 +1307,7 @@
                                     <th scope="row">3</th>
                                     <td>Specify columns</td>
                                     <td>
-                                        <li>For the location information uploaded in 2. provide the column that stores the respective information.</li>.
+                                        <li>For the location information uploaded in 2. provide the column that stores the respective information.</li>
                                         <li>Select the Column for the X coordinates. For the first column enter <code>0</code> for the second column enter <code>1</code> etc.</li>
                                         <li>Select the Column for the Y coordinates. For the first column enter <code>0</code> for the second column enter <code>1</code> etc.</li>
                                         <li>Select the Column for the Z coordinates. For the first column enter <code>0</code> for the second column enter <code>1</code> etc.*</li>
@@ -1258,16 +1409,163 @@
                         </table>
                     </details>
                 </details>
+
+                <!-- Packages used-->
+                <a id="aw_packages"></a>
+                <details  class="details"><summary> <span style="font-size: 18px">AW Packages used</span></summary>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name of package</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Platforms used</th>
+                                <th scope="col">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Scanpy</td>
+                                <td>
+                                    <p>Scanpy is an open-source toolkit for the analysis of single-cell and spatial expression data.</p>
+                                </td>
+                                <td>
+                                    <li>Visium</li>
+                                    <li>Xenium</li>
+                                    <li>Merfish</li>
+                                    <li>STOmics</li>
+                                </td>
+                                <td>
+                                    <a href="https://scanpy.readthedocs.io/en/stable/#">Scanpy</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Squidpy</td>
+                                <td>
+                                    <p>Squidpy is a tool for the analysis and visualization of spatial molecular data.</p>
+                                </td>
+                                <td>
+                                    <li>Xenium</li>
+                                    <li>Merfish</li>
+                                </td>
+                                <td>
+                                    <a href="https://squidpy.readthedocs.io/en/stable/">Squidpy</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Stereo</td>
+                                <td>
+                                    <p>Stereo is a package for spatial transcriptomics data analysis of STOmics data.</p>
+                                </td>
+                                <td>
+                                    <li>STOmics</li>
+                                </td>
+                                <td>
+                                    <a href="https://pypi.org/project/stereo/">Stereo</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Matplotlib</td>
+                                <td>
+                                    <p>Matplotlib is a Python 2D plotting library.</p>
+                                </td>
+                                <td>
+                                    <li>Visium</li>
+                                    <li>Xenium</li>
+                                    <li>Merfish</li>
+                                    <li>STOmics</li>
+                                </td>
+                                <td>
+                                    <a href="https://matplotlib.org/">Matplotlib</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Seaborn</td>
+                                <td>
+                                    <p>Seaborn is a data visualization library based on Matplotlib.</p>
+                                </td>
+                                <td>
+                                    <li>Visium</li>
+                                    <li>Xenium</li>
+                                </td>
+                                <td>
+                                    <a href="https://seaborn.pydata.org/">Seaborn</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SpatialDE</td>
+                                <td>
+                                    <p>SpatialDE is a method to identify genes which significantly depend on spatial coordinates in non-linear and non-parametric ways.</p>
+                                </td>
+                                <td>
+                                    <li>Visium</li>
+                                </td>
+                                <td>
+                                    <a href="https://github.com/Teichlab/SpatialDE">SpatialDE</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>LeidenAlg</td>
+                                <td>
+                                    <p>LeidenAlg is a Python implementation of the Leiden community detection algorithm.</p>
+                                </td>
+                                <td>
+                                    <li>Visium</li>
+                                </td>
+                                <td>
+                                    <a href="https://pypi.org/project/leidenalg/">LeidenAlg</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pandas</td>
+                                <td>
+                                    <p>Pandas is a data manipulation and analysis library for Python.</p>
+                                </td>
+                                <td>
+                                    <li>Visium</li>
+                                    <li>Xenium</li>
+                                </td>
+                                <td>
+                                    <a href="https://pandas.pydata.org/">Pandas</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NumPy</td>
+                                <td>
+                                    <p>NumPy is a fundamental package for scientific computing with Python.</p>
+                                </td>
+                                <td>
+                                    <li>Visium</li>
+                                    <li>Xenium</li>
+                                </td>
+                                <td>
+                                    <a href="https://numpy.org/">NumPy</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Scanorama</td>
+                                <td>
+                                    <p>Scanorama enables batch-correction and integration of heterogeneous scRNA-seq datasets.</p>
+                                </td>
+                                <td>
+                                    <li>Visium</li>
+                                </td>
+                                <td>
+                                    <a href="https://github.com/brianhie/scanorama">Scanorama</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>     
+                </details>
             </details>
         </div>
         <br>
         <div class="container">
-            <details open><summary> <span style="font-size: 24px">VR-Omics Visualisation</span><a id="visual"></a></summary>
+            <details><summary> <span style="font-size: 24px">VR-Omics Visualisation</span><a id="visual"></a></summary>
                 <br>
 
                 <!-- Gene search section -->
                 <a id="vis_geneSearch"></a>
-                <details open class="details"><summary> <span style="font-size: 18px">Gene Search Features</span></summary>
+                <details class="details"><summary> <span style="font-size: 18px">Gene Search Features</span></summary>
                     <table class="table table-striped">
                         <thead>
                             <th>Feature</th>
@@ -1280,12 +1578,7 @@
                             <tr>
                                 <th>Gene search - Heatmap
                                     <hr>
-                                    <span class="badge badge-pill badge-primary">Visium</span>
-                                    <span class="badge badge-pill badge-info">Xenium</span>
-                                    <span class="badge badge-pill badge-danger">STOmics</span>
-                                    <span class="badge badge-pill badge-dark">Merfish</span>
-                                    <span class="badge badge-pill badge-light">Tomo-Seq</span>
-                                    <span class="badge badge-pill badge-success">Custom</span>
+                                    All
                                     <hr>
                                     <span class="badge badge bg-dark">VR</span>                            
                                     <span class="badge badge badge-secondary">Demo</span>
@@ -1296,8 +1589,7 @@
                                     <ol>
                                     <li>Click on the search bar located at the top left of the menu panel.</li>
                                     <li>Start typing the name of the desired gene.</li>
-                                    <li>The auto-complete feature displays results as buttons below the search bar.</li>
-                                    <li>Click on a result to visualize the selected gene expression on the center of the screen.</li>
+                                    <li>Select from the auto-completed results by clicking any of the buttons below the search bar.</li>
                                     <li>The gene expression values are normalised and can be referenced using the colour gradient legend located at the bottom left of the screen.</li>
                                     </ol>
                                     
@@ -1329,14 +1621,13 @@
                                     <span class="badge badge badge-secondary">Demo</span>
                                 </th>
                                 <td>
-                                    <p>To search for a gene (gene is on) using the search bar:</p>
+                                    <p>To search for a gene (binary) using the search bar:</p>
 
                                     <ol>
-                                        <li>Move the <code>Gene is on</code> slider below the search bar to the right.</li>
-                                        <li>Click on the search bar located at the top left of the menu panel.</li>
+                                        <li>Move the slider below the search bar from <code>Heatmap</code> to <code>Binary</code></li>
+                                        <li>Click on the search bar.</li>
                                         <li>Start typing the name of the desired gene.</li>
-                                        <li>The auto complete feature will display a list of possible results in the scroll view below the search bar. These results will be presented as buttons.</li>
-                                        <li>Click on the desired result to visualise the selected gene expression on the data set in the centre of the screen.</li>
+                                        <li>Select the desired gene from the autocompleted buttons below the search bar.</li>
                                         <li>The gene expression values are normalised and can be referenced using the colour gradient located at the bottom left of the screen.</li>
                                     </ol>                                  
                                     
@@ -1558,7 +1849,7 @@
                                     <p>
                                         To remove all selections:
                                         <ul>
-                                            <li>In the selection tool context menu use the trash button <span class="badge badge-pill badge-info">🗑</span>.</li>
+                                            <li>In the selection tool context menu use the bin button <span class="badge badge-pill badge-info">🗑</span>.</li>
                                             <li>This will remove all selections made.</li>
                                         </ul>
                                     </p>
@@ -1708,6 +1999,202 @@
                                     <div style="width: 600px;">
                                         <figure>
                                             <img src="../assets/imgs/Documentation/Visualisation/ROI_3Dselection.PNG" style="max-width: 30%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+
+                <!-- Dimensionality Reduction -->
+                <a id="vis_dimreduction"></a>
+                <details class="details"><summary> <span style="font-size: 18px">Dimensionality Reduction Features</span></summary>
+                    <table class="table table-striped">
+                        <thead>
+                            <th>Feature</th>
+                            <th width="70%">Description</th>
+                            <th>Icon</th>
+                            <th>Image</th>
+                        </thead>
+                        <tbody>
+                            <!-- Spatial Visualisation -->
+                            <tr>
+                                <th>Visualising UMAP
+                                    <hr>
+                                    <span class="badge badge-pill badge-primary">Visium</span>
+                                    <span class="badge badge-pill badge-info">Xenium</span>
+                                    <span class="badge badge-pill badge-danger">STOmics</span>
+                                    <span class="badge badge-pill badge-dark">Merfish</span>
+                                    <hr>
+                                    <span class="badge badge bg-dark">VR</span>                            
+                                </th>
+                                <td>    
+                                    <ol>
+                                        <li>From the menu select the dropdown menu <code>spatial</code></li>
+                                        <li>Select <code>UMAP</code></li>
+                                    </ol>
+                                    </p>
+                                </td>
+                                <td>
+                                    <div style="width: 200px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/dim_reduction_select.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/umap.png" style="max-width: 100%;">
+                                            <figcaption>Clusters can be visualised regardless of the visualisation selected.</figcaption>
+
+                                        </figure>
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Visualising t-SNE
+                                    <hr>
+                                    <span class="badge badge-pill badge-primary">Visium</span>
+                                    <span class="badge badge-pill badge-info">Xenium</span>
+                                    <span class="badge badge-pill badge-danger">STOmics</span>
+                                    <span class="badge badge-pill badge-dark">Merfish</span>
+                                    <hr>
+                                    <span class="badge badge bg-dark">VR</span>                            
+                                </th>
+                                <td>    
+                                    <ol>
+                                        <li>From the menu select the dropdown menu <code>spatial</code></li>
+                                        <li>Select <code>t-SNE</code></li>
+                                    </ol>
+                                    </p>
+                                </td>
+                                <td>
+                                    <div style="width: 200px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/dim_reduction_select.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/tsne.png" style="max-width: 100%;">
+                                            <figcaption>Clusters can be visualised regardless of the visualisation selected.</figcaption>
+                                        </figure>
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Visualising spatial coordinates
+                                    <hr>
+                                    <span class="badge badge-pill badge-primary">Visium</span>
+                                    <span class="badge badge-pill badge-info">Xenium</span>
+                                    <span class="badge badge-pill badge-danger">STOmics</span>
+                                    <span class="badge badge-pill badge-dark">Merfish</span>
+                                    <hr>
+                                    <span class="badge badge bg-dark">VR</span>                            
+                                </th>
+                                <td>    
+                                    <ol>
+                                        <li>From the menu select the dropdown menu <code>UMAP</code> or <code>t-SNE</code></li>
+                                        <li>Select <code>Spatial</code></li>
+                                    </ol>
+                                    </p>
+                                </td>
+                                <td>
+                                    <div style="width: 200px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/dim_reduction_select.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/spatial.png" style="max-width: 100%;">
+                                        </figure>
+                                        <figcaption>Clusters can be visualised regardless of the visualisation selected.</figcaption>
+                                    </div> 
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </details>
+
+                <!-- Cluster-->
+                <a id="vis_cluster"></a>
+                <details class="details"><summary> <span style="font-size: 18px">Cluster Visualisation Features</span></summary>
+                    <table class="table table-striped">
+                        <thead>
+                            <th>Feature</th>
+                            <th width="70%">Description</th>
+                            <th>Icon</th>
+                            <th>Image</th>
+                        </thead>
+                        <tbody>
+                            <!-- Cluster -->
+                            <tr>
+                                <th>Show Leiden Cluster 
+                                    <hr>
+                                    <span class="badge badge-pill badge-primary">Visium</span>
+                                    <span class="badge badge-pill badge-info">Xenium</span>
+                                    <span class="badge badge-pill badge-danger">STOmics</span>
+                                    <span class="badge badge-pill badge-dark">Merfish</span>
+                                    <span class="badge badge-pill badge-success">Custom</span>
+                                    <hr>
+                                    <span class="badge badge bg-dark">VR</span>                            
+                                    <span class="badge badge badge-secondary">Demo</span>
+                                </th>
+                                <td>
+                                    <p>If cluster information is available it can be visualised in the VR-Omics Visualiser:</p>
+                                    <ul>
+                                        <li>Expand the top menu in the top center of the screen</li>
+                                        <li>Click on the Cluster button</li>
+                                        <li>Each location will be highlighted according to the cluster information found. Locations that are not found in any cluster will become black.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <figure>
+                                        <img class="image-invert" src="../assets/imgs/Documentation/Icons/cluster.png" style="max-width: 40px;">
+                                    </figure> 
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/cluster.png" style="max-width: 100%;">
+                                        </figure> 
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Show Single Clusters
+                                    <hr>
+                                    <span class="badge badge-pill badge-primary">Visium</span>
+                                    <span class="badge badge-pill badge-info">Xenium</span>
+                                    <span class="badge badge-pill badge-danger">STOmics</span>
+                                    <span class="badge badge-pill badge-dark">Merfish</span>
+                                    <span class="badge badge-pill badge-success">Custom</span>
+                                    <hr>
+                                    <span class="badge badge bg-dark">VR</span>                            
+                                    <span class="badge badge badge-secondary">Demo</span>
+                                </th>
+                                <td>
+                                    <ol>
+                                        <li>Expand the top menu in the top center of the screen</li>
+                                        <li>Click on the Cluster button</li>
+                                        <li>From the cluster legend at the bottom click on the coloured icon of the cluster to visualise.</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <figure>
+                                        <img class="image-invert" src="../assets/imgs/Documentation/Icons/cluster.png" style="max-width: 40px;">
+                                    </figure> 
+                                </td>
+                                <td>
+                                    <div style="width: 600px;">
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/clust_all.png" style="max-width: 100%;">
+                                        </figure> 
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Visualisation/clust_0.png" style="max-width: 100%;">
+                                            <figcaption>Visualisation of only cluster 0</figcaption>
                                         </figure> 
                                     </div> 
                                 </td>
@@ -2242,41 +2729,6 @@
                             <th>Image</th>
                         </thead>
                         <tbody>
-                            <!-- Cluster -->
-                            <tr>
-                                <th>Show Cluster information 
-                                    <hr>
-                                    <span class="badge badge-pill badge-primary">Visium</span>
-                                    <span class="badge badge-pill badge-info">Xenium</span>
-                                    <span class="badge badge-pill badge-danger">STOmics</span>
-                                    <span class="badge badge-pill badge-dark">Merfish</span>
-                                    <span class="badge badge-pill badge-light">Tomo-Seq</span>
-                                    <span class="badge badge-pill badge-success">Custom</span>
-                                    <hr>
-                                    <span class="badge badge bg-dark">VR</span>                            
-                                    <span class="badge badge badge-secondary">Demo</span>
-                                </th>
-                                <td>
-                                    <p>If cluster information is available it can be visualised in the VR-Omics Visualiser:</p>
-                                    <ul>
-                                        <li>Expand the top menu in the top center of the screen</li>
-                                        <li>Click on the Cluster button</li>
-                                        <li>Each location will be highlighted according to the cluster information found. Locations that are not found in any cluster will become black.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <figure>
-                                        <img class="image-invert" src="../assets/imgs/Documentation/Icons/cluster.png" style="max-width: 40px;">
-                                    </figure> 
-                                </td>
-                                <td>
-                                    <div style="width: 600px;">
-                                        <figure>
-                                            <img src="../assets/imgs/Documentation/Visualisation/cluster.png" style="max-width: 100%;">
-                                        </figure> 
-                                    </div> 
-                                </td>
-                            </tr>
                             <!-- Accessing plots -->
                             <tr>
                                 <th><a id="vis_plot_access"></a>Access spatial plots
@@ -2700,6 +3152,9 @@
     </div>
     </section>
 
+    <footer class="mt-5 py-4 border-top border-secondary">
+        Looking for the VR-Omics legacy page: <button type="button" class="btn btn-secondary"><a href="vromics_legacy.html">VR-Omics v1.0</a></button>
+    </footer>
     <!-- Contact Section -->
     <section id="contact" class="section has-img-bg pb-0">
         <div class="container">
@@ -2738,6 +3193,46 @@
 
     <!-- LeadMark js -->
     <script src="../assets/js/leadmark.js"></script>
+
+    <button id="backToTopButton">Back to Top</button>
+
+    <script>
+        // JavaScript for the button behavior
+        document.getElementById("backToTopButton").addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+
+    <script>
+        function openDetails(targetId) {
+            // Scroll to the target element with fine-tuned scrolling
+            document.querySelector(`#${targetId}`).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start', // This aligns the top of the target element with the top of the viewport
+                inline: 'start' // This aligns the start (left) side of the target element with the start (left) side of the viewport
+            });
+        
+            // Trigger the click event on the summary element to open the details section
+            const summaryElement = document.querySelector(`#${targetId}`).nextElementSibling.querySelector('summary');
+            summaryElement.click();
+        }
+    </script>
+        
+        <script>
+            window.onscroll = function() {
+                var button = document.getElementById("backToTopButton");
+            
+                // Display the button when you scroll down 20px from the top of the document
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            };
+            </script>
+            
+        
 
 </body>
 </html>
