@@ -82,7 +82,8 @@
     <section>
         <center>  
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1JQYp113w1blmKQDBDL6LsnGcfaFqbdNW/preview" width="80%" height="720" allow="autoplay" frameborder="0" seamless="" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/1G1rjKhRqL_6ljPnTd3NFI1arjh1Ibf6O/preview" width="80%" height="720" allow="autoplay" frameborder="0" seamless="" allowfullscreen></iframe>
+                
                 <div style="width: 80px; height: 80px; position: absolute; opacity: 0; right: 0px; top: 0px;">&nbsp;</div>
             </div>    
         </center>     
@@ -162,6 +163,12 @@
             <details>
                 <summary><span style="font-size: 24px">VR-Omics Setup</span></summary>
                 <br>
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    Available for Windows 10 only
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+                 </div>
                 <table class="table table-striped">
                     <!-- FIXME: Update the setup section to include the new version, keep this one as legacy version install -->
                     <tbody>
@@ -268,7 +275,7 @@
                                     <!-- SVG analysis -->
                                     <tr>
                                         <th scope="row">3</th>
-                                        <td>Perform spatial analysis</td>
+                                        <td>Identify spatially variable genes</td>
                                         <td>
                                                 <p>Tick the <span class="badge badge-pill badge-info">Spatially Variable Genes</span> box to perform spatial analysis.</p>  
                                         </td>
@@ -393,7 +400,7 @@
                             </table> 
                         </details>
                         <!-- Join/Concat data in 2D space -->
-                        <details class="details sub"><summary><strong>Concat multiple Visium slides in 2D space</strong></summary><a id="visium_load_concat"></a>
+                        <details class="details sub"><summary><strong>Concatenate multiple Visium slides in 2D space</strong></summary><a id="visium_load_concat"></a>
                             <h2></h2>
                             <table class="table table-striped">
                                 <tbody>
@@ -1451,15 +1458,15 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Stereo</td>
+                                <td>Stereopy</td>
                                 <td>
-                                    <p>Stereo is a package for spatial transcriptomics data analysis of STOmics data.</p>
+                                    <p>Stereopy is a package for spatial transcriptomics data analysis of STOmics data.</p>
                                 </td>
                                 <td>
                                     <li>STOmics</li>
                                 </td>
                                 <td>
-                                    <a href="https://pypi.org/project/stereo/">Stereo</a>
+                                    <a href="https://stereopy.readthedocs.io/en/latest/index.html">Stereopy</a>
                                 </td>
                             </tr>
                             <tr>
@@ -2044,8 +2051,6 @@
                                     <div style="width: 600px;">
                                         <figure>
                                             <img src="../assets/imgs/Documentation/Visualisation/umap.png" style="max-width: 100%;">
-                                            <figcaption>Clusters can be visualised regardless of the visualisation selected.</figcaption>
-
                                         </figure>
                                     </div> 
                                 </td>
