@@ -1,0 +1,5 @@
+ID ,Human (hg19) Coordinates ,Mouse (mm9) Bracketing Genes ,Mouse (mm9) Coordinates ,Mouse (mm9) Bracketing Genes , ,Expression ,Section
+hs498 ,chr12:114660367-114661006 ,RBM19-TBX5 ,chr5:120426570-120427199 ,Tbx5-Rbm19 ,Negative ,1,A
+hs2329 ,chr12:114885212-114886394 ,TBX5-AS1-TBX3 ,chr5:120246796-120247956 ,LOC433944-Tbx5 ,Negative ,2,B
+mm370 ,chr12:114857536-114859474 ,TBX5-AS1-TBX3 ,chr5:120271992-120274249 ,LOC433944-Tbx5 ,Negative ,3,C
+mm1282 ,chr12:114885488-114887425 ,TBX5-AS1-TBX3 ,chr5:120245912-120247684 ,LOC433944-Tbx5 ,Negative ,4,D
