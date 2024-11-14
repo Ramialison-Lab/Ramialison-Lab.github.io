@@ -140,7 +140,18 @@
                             var row = resultTable.insertRow();
                             for (var k = 0; k < cells.length; k++) {
                                 var cell = row.insertCell(k);
-                                cell.textContent = cells[k];
+                                //cell.textContent = cells[k];
+								// Check if this cell contains a UCSC URL
+								if (cells[k].includes('genome.ucsc.edu')) {
+									// Create an anchor element
+									var link = document.createElement('a');
+									link.href = cells[k];
+									link.textContent = 'UCSC';
+									link.target = '_blank';  // Open in new tab
+									cell.appendChild(link);
+								} else {
+									cell.textContent = cells[k];
+								}
                             }
                         }
                     }
