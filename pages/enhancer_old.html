@@ -1,0 +1,152 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Ramialison-Lab Software Website">
+    <meta name="author" content="Ramialison-Lab">
+    <!-- font icons -->
+    <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
+		<link rel="stylesheet" href="../assets/css/leadmark.css">
+   	<title>Zebrafish Cardiac Enhancer Search</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top affix-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="https://ramialison-lab.github.io/index.html">
+                <img src="Enhancer_files/logo_free.png" alt="">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ramialison-lab.github.io/index.html">Home</a>
+                    </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="geneTable">
+            <div class="overlay">
+                <h1 class="subtitle">Zebrafish enhancer database</h1>
+                <h1 class="title">Enhancer search</h1>  
+            </div>
+            <div class="shape">
+                <svg viewBox="0 0 1500 200">
+                    <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"></path>
+                </svg>
+            </div>  
+            <div class="mouse-icon"><div class="wheel"></div>
+        </div>
+    </div></header>
+    <!-- End Of Page Header -->
+
+    <h2>Zebrafish Cardiac Enhancer Search</h2>
+
+    <label for="search">Search:</label>
+    <input type="text" id="search" placeholder="Enter your search term">
+    <button onclick="searchCSV()">Search</button>
+
+    <h2>Search Results:</h2>
+    <table id="resultTable">
+        <!-- Table headers will be populated dynamically -->
+    </table>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">Murdoch Children's Research Institute, Parkville, Melbourne</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">gulrez.chahal@mcri.edu.au</p>
+                    <br>
+                    <h6 class="mb-0">Website</h6>
+                    <p class="mb-0"><a href="https://www.mcri.edu.au/research/research-areas/stem-cell-biology/transcriptomics-and-bioinformatics">MCRI website</a> </p>
+ 
+                    <p></p>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script></p>     
+            </footer>
+            <!-- End of Page Footer -->  
+        </div>
+    </section>
+    <script>
+        function searchCSV() {
+            var query = document.getElementById('search').value.toLowerCase();
+            var resultTable = document.getElementById('resultTable');
+            resultTable.innerHTML = '';  // Clear previous results
+
+            // Replace with the actual path to your CSV file
+            var csvFilePath = 'enhancer_data.csv';
+
+            // Fetch the CSV file
+            fetch(csvFilePath)
+                .then(response => response.text())
+                .then(data => {
+                    var rows = data.split('\n');
+                    var headers = rows[0].split(',');
+
+                    // Create table headers
+                    var headerRow = resultTable.insertRow(0);
+                    for (var i = 0; i < headers.length; i++) {
+                        var th = document.createElement('th');
+                        th.textContent = headers[i];
+                        headerRow.appendChild(th);
+                    }
+
+                    // Search and display matching rows
+                    for (var j = 1; j < rows.length; j++) {
+                        var cells = rows[j].split(',');
+
+                        // Check if any cell in the row contains the search query
+                        if (cells.some(cell => cell.toLowerCase().includes(query))) {
+                            var row = resultTable.insertRow();
+                            for (var k = 0; k < cells.length; k++) {
+                                var cell = row.insertCell(k);
+                                cell.textContent = cells[k];
+                            }
+                        }
+                    }
+                })
+                .catch(error => console.error('Error fetching CSV file:', error));
+        }
+    </script>
+</body>
+</html>
