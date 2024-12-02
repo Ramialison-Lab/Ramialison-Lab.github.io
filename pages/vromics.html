@@ -400,100 +400,7 @@
                                 </tbody>
                             </table> 
                         </details>
-                        <!-- Join/Concat data in 2D space -->
-                        <details class="details sub"><summary><strong>Concatenate multiple Visium slides in 2D space</strong></summary><a id="visium_load_concat"></a>
-                            <h2></h2>
-                            <table class="table table-striped">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Select the Concat menu</td>
-                                        <td>
-                                            <ol>
-                                                <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
-                                                <li>Select <span class="badge badge-pill badge-info">Concat</span></li> 
-                                            </ol>
-                                        </td>
-                                        <td>
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_options_concat.png" style="max-width: 100%;">
-                                            </figure>  
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Select the Visium samples to merge</td>
-                                        <td>
-                                            <ol>
-                                                <li>Click <span class="badge badge-pill badge-info">Browse</span></li>
-                                                <li>From the Explorer find the main folders of the datasets to merge.</li> 
-                                                <li>Click <span class="badge badge-pill badge-info">Load</span> to load the samples.</li>
-                                            </ol>
-                                        </td>
-                                        <td>
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_select.png" style="max-width: 100%;">
-                                            </figure>  
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Check the selected samples</td>
-                                        <td>
-                                            <ol>
-                                                <li>The selected samples will be shown</li>
-                                                <li>Expand the tissue image or delete a sample using the <span class="badge badge-pill badge-info">🗑</span> button.</li> 
-                                                <li>Click <span class="badge badge-pill badge-info">Concat</span> to confirm the selection.</li>
-                                            </ol>
-                                        </td>
-                                        <td>
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_containers.png" style="max-width: 100%;">
-                                                <figcaption>The order of the samples is not important for the following steps.</figcaption>
-                                            </figure>  
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Arrange the slides</td>
-                                        <td>
-                                            <ol>
-                                                <li>Arrange the slides by using the mouse.</li>
-                                                <li>Drag a sample by using left click to move the sample into position</li>
-                                                <li>Hold down the left mouse button and click the right mouse button once to rotate a sample by 90 degrees.</li>
-                                                <li>Click <span class="badge badge-pill badge-info">Concat</span> to confirm.</li>
-                                            </ol>
-                                        </td>
-                                        <td>
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_arranged.png" style="max-width: 100%;">
-                                                <figcaption>Ensure that no samples overlap with each other.</figcaption>
-                                            </figure>  
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>Processing the joint dataset</td>
-                                        <td>
-                                            <ol>
-                                                <li>(Optional) Enter filter parameters to filter the joint dataset or leave fields blank.</li>
-                                                <li>(Optional) Select T-SNE and UMAP analysis</li>
-                                                <li>(Optional) Select SVG analysis to run spatial analysis.</li>
-                                                <li>Click <span class="badge badge-pill badge-info">Process</span> to confirm.</li>
-                                            </ol>
-                                        </td>
-                                        <td>
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_filter.png" style="max-width: 100%;">
-                                                <figcaption>Click here for more information on <a href="#filter">filter parameters.</a> Selecting T-SNE and UMAP as well as SVG analysis increases processing time of the sample.</figcaption>
-                                            </figure>  
-                                        </td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                            <br>
-                        </details>
+                        
                         <!-- Load multiple slides in 3D space -->
                         <details class="details sub"><summary><strong>Loading multiple Visium slides in 3D</strong></summary><a id="visium_load_multiple"></a>
                             <div class="alert alert-primary alert-dismissible fade show" role="alert">
@@ -675,6 +582,102 @@
                             </tbody>
                         </table>
                     </details>
+
+                    <!-- Concat section collapsible-->
+                    <details class="details sub"><summary><strong>Concat</strong></summary><a id="visium_concat"></a>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Navigate to the Visium concat menu</td>
+                                    <td>
+                                        <ol>
+                                            <li>From the main menu select <span class="badge badge-pill badge-info">Visium</span></li>
+                                            <li>Select <span class="badge badge-pill badge-info">Concat</span></li> 
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_options_concat.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Select datasets to be aligned</td>
+                                    <td>
+                                        <li>Click <span class="badge badge-pill badge-info">Browse</span> and select multiple datasets (folder) from your local machine.</li>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_concat_browse.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div> 
+                                    </td>
+                                </tr>
+                                
+                                <th scope="row">3</th>
+                                <td>Check the selected samples</td>
+                                <td>
+                                    <ol>
+                                        <li>The selected samples will be shown</li>
+                                        <li>Expand the tissue image or delete a sample using the <span class="badge badge-pill badge-info">🗑</span> button.</li> 
+                                        <li>Click <span class="badge badge-pill badge-info">Concat</span> to confirm the selection.</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <figure>
+                                        <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_containers.png" style="max-width: 100%;">
+                                        <figcaption>The order of the samples is not important for the following steps.</figcaption>
+                                    </figure>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Arrange the slides</td>
+                                <td>
+                                    <ol>
+                                        <li>Arrange the slides by using the mouse.</li>
+                                        <li>Drag a sample by using left click to move the sample into position</li>
+                                        <li>Hold down the left mouse button and click the right mouse button once to rotate a sample by 90 degrees.</li>
+                                        <li>Click <span class="badge badge-pill badge-info">Concat</span> to confirm.</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <figure>
+                                        <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_arranged.png" style="max-width: 100%;">
+                                        <figcaption>Ensure that no samples overlap with each other.</figcaption>
+                                    </figure>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Processing the joint dataset</td>
+                                <td>
+                                    <ol>
+                                        <li>(Optional) Enter filter parameters to filter the joint dataset or leave fields blank.</li>
+                                        <li>(Optional) Select T-SNE and UMAP analysis</li>
+                                        <li>(Optional) Select SVG analysis to run spatial analysis.</li>
+                                        <li>Click <span class="badge badge-pill badge-info">Process</span> to confirm.</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <figure>
+                                        <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_filter.png" style="max-width: 100%;">
+                                        <figcaption>Click here for more information on <a href="#filter">filter parameters.</a> Selecting T-SNE and UMAP as well as SVG analysis increases processing time of the sample.</figcaption>
+                                    </figure>  
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </details>
+
+
+
                     <!-- Demo section collapsible -->
                     <details class="details sub"><summary><strong>Demo</strong></summary><a id="visium_demo"></a>
                         <table class="table table-striped">
@@ -1270,6 +1273,54 @@
                             </tbody>
                         </table>
                     </details>
+
+                    <details class="details sub"><summary><strong>Merge 3D</strong></summary><a id="merfish_load"></a>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Navigate to the MERFISH Merge 3D menu</td>
+                                    <td>
+                                        <ol>
+                                            <li>From the main menu select <span class="badge badge-pill badge-info">MERFISH</span></li>
+                                            <li>Select <span class="badge badge-pill badge-info">Merge 3D</span></li> 
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Merfish/Merfish_options_Merge3D.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Select the MERFISH files</td>
+                                    <td>
+                                        <ol>
+                                            <li>Select <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Select the MERFISH sample folder processed using the VR-Omics AW</li>
+                                            <li>Select <span class="badge badge-pill badge-info">Visualise</span> to confirm.</li>
+                                        </ol>
+                                </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_load.png" style="max-width: 100%;">
+                                            </figure> 
+                                            <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure>   
+                                        </div> 
+                                        <p>The MERFISH data used was provided by <a href="vizgen.com">Vizgen</a> where there data is publicly available under their <a href="vizgen.com/data-release-program/">data release program.</a></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+
                 </details>            
                 <!-- Custom -->
                 <details  class="details"><summary> <span style="font-size: 18px">Custom data</span></summary>
