@@ -173,7 +173,7 @@
                             <th scope="row">1</th>
                             <td>Download VR-Omics</td>
                             <td>
-                                <p>Click the <code>Download VR-Omics for Windows 64-bit </code> button to obtain VR-Omics from our repository, or click <a href="https://figshare.com/articles/software/VR-Omics_Exploration_of_Spatial_Transcriptomics_data_in_3D/24503611">here</a>.</p>
+                                <p>Click the <code>Download VR-Omics for Windows 64-bit </code> button to obtain VR-Omics from our repository, or click <a href="https://figshare.com/articles/software/_b_VR-Omics_b_Automated_Integration_of_Multi-Slice_Spatial_Transcriptomics_Data_in_2D_and_3D_v3_0_/28259834">here</a>.</p>
                             </td>
                             <td>
                                 <a href="https://widgets.figshare.com/articles/28259834/embed?show_title=1" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics for Windows 64-bit</a>
@@ -220,7 +220,7 @@
                     </tbody>
                 </table>
                 <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                    If the download button is not working, download VR-Omics <a href="https://figshare.com/articles/software/VR-Omics_Exploration_of_Spatial_Transcriptomics_data_in_3D/24503611">here</a>
+                    If the download button is not working, download VR-Omics <a href="https://figshare.com/articles/software/_b_VR-Omics_b_Automated_Integration_of_Multi-Slice_Spatial_Transcriptomics_Data_in_2D_and_3D_v3_0_/28259834">here</a>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                        <span aria-hidden="true">&times;</span>
                     </button>
@@ -289,7 +289,7 @@
                     </tbody>
                 </table>
                 <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                    If the download button is not working, download VR-Omics <a href="https://figshare.com/articles/software/VR-Omics_Exploration_of_Spatial_Transcriptomics_data_in_3D/24503611">here</a>
+                    If the download button is not working, download VR-Omics <a href="https://figshare.com/articles/software/VR-Omics_MAC/28340495?file=52114634">here</a>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                        <span aria-hidden="true">&times;</span>
                     </button>
@@ -650,10 +650,9 @@
                                                 <img src="../assets/imgs/Documentation/SVG/svgcutoff_txt.png" id="vis_opt" style="max-width: 100%;">
                                             </figure>  
                                             <p><i>To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Process</span>.</i></p>                           
-                                            <p>The output will be saved in the VR-Omics folder</p>
+                                                <p>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/visium_output.png" style="max-width: 100%;">
-                                                <p>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                             </figure> 
                                             <p>After clicking Process, the Python executable will be started. Don't close the pop up windows and wait until the pipeline has finished. This might take a couple of minutes.</p>
                                         </div> 
@@ -756,10 +755,9 @@
                                         <img src="../assets/imgs/Documentation/Visium_and_C18/vis_concat_filter.png" style="max-width: 100%;">
                                         <figcaption>Click here for more information on <a href="#filter">filter parameters.</a> Selecting T-SNE and UMAP as well as SVG analysis increases processing time of the sample.</figcaption>
                                     </figure>
-                                    <p>The output will be saved in the VR-Omics folder</p>
+                                    <p>The output will be saved in the VR-Omics folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                     <figure>
                                         <img src="../assets/imgs/Documentation/Visium_and_C18/visium_joint_output.png" style="max-width: 100%;">
-                                        <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
                                     </figure>   
                                 </td>
                             </tr>
@@ -1016,8 +1014,7 @@
                                         </figure>  
                                         <p><i>p-value threshold for SVG cutoff can be customized. To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Process</span>.</i></p>                   
                                  
-                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
-                                        <p>The output will be saved in the VR-Omics folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
+                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                         <figure>
                                             <img src="../assets/imgs/Documentation/Xenium/xenium_output.png" style="max-width: 100%;">
                                         </figure>  
@@ -1215,7 +1212,7 @@
                                         </div> 
                                         <p>The process step can take couple of minutes depending on the size of the dataset and the computational power of the machine.</p>
                                         <p>Once the data was processed this step can be skipped and the data can be visualised using the <a href="#stomics_load">STOmics load</a> option.</p>
-                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                         <figure>
                                             <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
                                         </figure>  
@@ -1257,7 +1254,7 @@
                                             </figure> 
                                         </div> 
                                         <p>Ensure the data was processed using the <a href="#stomics_process">Process</a> function.</p>
-                                        <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                        <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                         <figure>
                                             <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
                                         </figure>  
@@ -1315,7 +1312,7 @@
                                             <img src="../assets/imgs/Documentation/SVG/svgcutoff_txt.png" id="vis_opt" style="max-width: 100%;">
                                         </figure>  
                                         <p><i>p-value threshold for SVG cutoff can be customized. To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Download</span>.</i></p>                                                      
-                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                        <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                         <figure>
                                             <img src="../assets/imgs/Documentation/Merfish/merfish_output.png" style="max-width: 100%;">
                                         </figure>  
@@ -1360,7 +1357,7 @@
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Merfish/merfish_load.png" style="max-width: 100%;">
                                             </figure> 
-                                            <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                            <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
                                             </figure>   
@@ -1407,7 +1404,7 @@
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Merfish/merfish_load.png" style="max-width: 100%;">
                                             </figure> 
-                                            <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
+                                            <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
                                             </figure>   
@@ -1470,6 +1467,9 @@
                                         </figure>  
                                         <p><i>p-value threshold for SVG cutoff can be customized. To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Download</span>.</i></p>                   
                                         <p>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code> To Visualise the data select the complete folder as shown in the figure</p> 
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                        </figure>  
                                         <p>After clicking Process, the Python executable will be started. Don't close the pop up windows and wait until the pipeline has finished. This might take a couple of minutes.</p>
                                     </td>
                                 </tr>
@@ -1511,7 +1511,7 @@
                                                 <img src="../assets/imgs/Documentation/NanoString/nano_load.png" style="max-width: 100%;">
                                             </figure> 
                                             <p>Select the NanoString folder <a href="#nanostring_process">processed</a> with the VR-Omics AW (highlighted in green in the picture) using <span class="badge badge-pill badge-info">Browse</span>.</p>
-                                            <p>The data set can be found in the VR-Omics directory. Navigate from there to <code>VR-Omics/Assets/PythonFiles/sample</code> select the whole folder as shown in the picture</p>
+                                            <p>The processed data set can be found in the VR-Omics directory. Navigate from there to <code>VR-Omics/Assets/PythonFiles/sample</code> select the whole folder as shown in the picture</p>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
                                             </figure>  
