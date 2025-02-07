@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="#abstract" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics V2.0</a>
+                        <a href="#abstract" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics V3.0</a>
                     </li>         
                     <li class="nav-item">
                         <a class="nav-link" href="https://figshare.com/s/78bcc6320cf3b2ee64af">Test Data</a>
@@ -96,9 +96,9 @@
                     <h6 class="section-title mb-0">Abstract</h6>
                     <p>Spatially resolved transcriptomics (SRT) technologies produce complex, multi-dimensional data sets of gene expression information at subcellular levels that enable biologist to systematically investigate spatiotemporal gene expression patterns. However, analysis of SRT data remains broadly underpowered by complexity and lack of adequate software suited to non-computational users. We introduce VR-Omics, a freely available programme for comprehensive analysis, visualisation, and exploration of single or multi-section SRT data generated from a variety of platforms as desktop application or immersive virtual environment. VR-Omics accommodates various SRT technologies, including 10x Genomics' Visium and Xenium, Vizgen's MERFISH, open-source Tomo-seq, and custom SRT data. The system can be implemented as a local 3D desktop application or as an immersive environment in virtual reality using head-mounted display. This allows biologists to interact with the data in novel ways that were previously inaccessible, which includes visually exploring the gene expression patterns of an organ and comparing genes based on their 3D expression profiles.
                     </p>
-                        <a href="https://widgets.figshare.com/articles/24503611/embed?show_title=1" class="nav-link btn btn-primary btn-sm rounded d-block mb-3 ml-4">Download VR-Omics for Windows 64-bit</a>
+                        <a href="https://widgets.figshare.com/articles/28259834/embed?show_title=1" class="nav-link btn btn-primary btn-sm rounded d-block mb-3 ml-4">Download VR-Omics for Windows 64-bit</a>
                         
-                        <a href="" class="nav-link btn btn-primary btn-sm rounded d-block ml-4">Download VR-Omics for MacOs (Beta) </a>
+                        <a href="https://figshare.com/articles/software/VR-Omics_MAC/28340495?file=52114634" class="nav-link btn btn-primary btn-sm rounded d-block ml-4">Download VR-Omics for MacOs (Beta) </a>
                 </div>
                 <div class="col-md-6 pl-md-5">
                     <div class="row">
@@ -176,7 +176,7 @@
                                 <p>Click the <code>Download VR-Omics for Windows 64-bit </code> button to obtain VR-Omics from our repository, or click <a href="https://figshare.com/articles/software/VR-Omics_Exploration_of_Spatial_Transcriptomics_data_in_3D/24503611">here</a>.</p>
                             </td>
                             <td>
-                                <a href="https://widgets.figshare.com/articles/24503611/embed?show_title=1" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics for Windows 64-bit</a>
+                                <a href="https://widgets.figshare.com/articles/28259834/embed?show_title=1" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics for Windows 64-bit</a>
                             </td>
                             
                         </tr>
@@ -242,10 +242,10 @@
                             <th scope="row">1</th>
                             <td>Download VR-Omics</td>
                             <td>
-                                <p>Click the <code>Download VR-Omics for MacOs (Beta)</code> button to obtain VR-Omics from our repository, or click <a href="">here</a>.</p>
+                                <p>Click the <code>Download VR-Omics for MacOs (Beta)</code> button to obtain VR-Omics from our repository, or click <a href="https://figshare.com/articles/software/VR-Omics_MAC/28340495?file=52114634">here</a>.</p>
                             </td>
                             <td>
-                                <a href="https://widgets.figshare.com/articles/24503611/embed?show_title=1" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics for MacOs (Beta)</a>
+                                <a href="https://figshare.com/articles/software/VR-Omics_MAC/28340495?file=52114634" class="ml-4 nav-link btn btn-primary btn-sm rounded">Download VR-Omics for MacOs (Beta)</a>
                             </td>
                             
                         </tr>
@@ -359,6 +359,10 @@
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_Download_svg.png" id="vis_opt" style="max-width: 100%;">
                                             </figure>  
                                             <p><i>Spatially variable genes are genes that exhibit differences in expression levels across different regions or cell types within a tissue or organism.</i></p>                   
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/SVG/svgcutoff_txt.png" id="vis_opt" style="max-width: 100%;">
+                                            </figure>  
+                                            <p><i>p-value threshold for SVG cutoff can be customized. To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Download</span>.</i></p>                   
                                         </td>
                                     </tr>
                                     <!-- Download the dataset -->
@@ -634,7 +638,7 @@
                                     <td>
                                         <ol>
                                             <li>Select the <a href="#filter">filter parameters</a>.</li> 
-                                            <li>Optionally, perform spatial analysis by selecting the <code>SVG Analysis</code> toggle.</li>                               
+                                            <li>Optionally, perform spatial analysis by selecting the <code>SVG Analysis</code> toggle with customized p-value threshold.</li>                               
                                         </ol>
                                     </td>
                                     <td>
@@ -642,10 +646,14 @@
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/vis_process_menu.png" style="max-width: 100%;">
                                             </figure> 
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/SVG/svgcutoff_txt.png" id="vis_opt" style="max-width: 100%;">
+                                            </figure>  
+                                            <p><i>To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Process</span>.</i></p>                           
                                             <p>The output will be saved in the VR-Omics folder</p>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/visium_output.png" style="max-width: 100%;">
-                                                <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
+                                                <p>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                             </figure> 
                                             <p>After clicking Process, the Python executable will be started. Don't close the pop up windows and wait until the pipeline has finished. This might take a couple of minutes.</p>
                                         </div> 
@@ -964,7 +972,6 @@
                 <details class="details"><summary> <span style="font-size: 18px">Xenium</span></summary>
                     <details class="details sub"><summary><strong>Process</strong></summary><a id="xenium_process"></a>
                         <a id="aw_xenium"></a>
-                        <h2>Process Xenium data</h2>
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -992,7 +999,7 @@
                                             <li>Select the cell feature matrix <code>.h5</code> file using <span class="badge badge-pill badge-info">Browse</span>.</li>
                                             <li>Select the cells <code>csv</code> file using <span class="badge badge-pill badge-info">Browse</span>.</li>
                                             <li>(Optional) select filter parameters or leave blank.</li>
-                                            <li>Select the <code>Run SVG Analysis</code> toggle to perform spatial analysis (Moran Results)</li>
+                                            <li>Select the <code>Run SVG Analysis</code> toggle to perform spatial analysis (Moran Results) and customise p-value if needed.</li>
                                             <li>Select <code>T-SNE & UMAP</code> toggle.</li>
                                             <li>Click <span class="badge badge-pill badge-info">Process</span> to confirm.</li>
                                         </ol>
@@ -1004,11 +1011,15 @@
                                             </figure> 
                                         </div> 
                                         <p>Selecting SVG Analysis and/or T-SNE/UMAP will increase processing time of the sample.</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/SVG/svgcutoff_txt.png" id="vis_opt" style="max-width: 100%;">
+                                        </figure>  
+                                        <p><i>p-value threshold for SVG cutoff can be customized. To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Process</span>.</i></p>                   
+                                 
                                         <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
-                                        <p>The output will be saved in the VR-Omics folder</p>
+                                        <p>The output will be saved in the VR-Omics folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                         <figure>
                                             <img src="../assets/imgs/Documentation/Xenium/xenium_output.png" style="max-width: 100%;">
-                                            <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
                                         </figure>  
                                         <p>After clicking Process, the Python executable will be started. Don't close the pop up windows and wait until the pipeline has finished. This might take a couple of minutes.</p>
                                     </td>
@@ -1081,7 +1092,6 @@
                 <details class="details"><summary> <span style="font-size: 18px">Tomo-Seq</span></summary>
                     <details class="details sub"><summary><strong>Load</strong></summary><a id="tomo_load"></a>
                         <a id="aw_tomo"></a>
-                        <h2>Load Tomo-Seq data</h2>
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -1156,8 +1166,6 @@
                 <details  class="details"><summary> <span style="font-size: 18px">STOmics</summary>
                     <details class="details sub"><summary><strong>Process</strong></summary><a id="stomics_process"></a>
                     </span><a id="aw_stomics"></a>
-
-                        <h2>Process STOmics data</h2>
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -1303,6 +1311,10 @@
                                             </figure> 
                                         </div> 
                                         <p>The MERFISH data we used is from <a href="vizgen.com">Vizgen</a>, where there data is publicly available under their <a href="vizgen.com/data-release-program/">data release program.</a></p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/SVG/svgcutoff_txt.png" id="vis_opt" style="max-width: 100%;">
+                                        </figure>  
+                                        <p><i>p-value threshold for SVG cutoff can be customized. To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Download</span>.</i></p>                                                      
                                         <p>The processed data will be saved in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure.</p>
                                         <figure>
                                             <img src="../assets/imgs/Documentation/Merfish/merfish_output.png" style="max-width: 100%;">
@@ -1407,7 +1419,179 @@
                         </table>
                     </details>
 
-                </details>            
+                </details>    
+                <!-- NanoString -->
+                <details class="details"><summary> <span style="font-size: 18px">NanoString</span></summary>
+                    <details class="details sub"><summary><strong>Process</strong></summary><a id="nanostring_process"></a>
+                        <a id="aw_nanostring"></a>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Navigate to the NanoString process menu</td>
+                                    <td>
+                                        <ol>
+                                            <li>From the main menu select <span class="badge badge-pill badge-info">NanoString</span></li>
+                                            <li>Select <span class="badge badge-pill badge-info">Process</span></li> 
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/NanoString/nano_general.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Select the NanoString files</td>
+                                    <td>
+                                        <ol>
+                                            <li>Select the folder for Nanostring process </li>
+                                            <li>Select the count file <code>.csv</code> using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>Select the metadata <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>Select the POV positions <code>.csv</code> file using <span class="badge badge-pill badge-info">Browse</span>.</li>
+                                            <li>(Optional) select filter parameters or leave blank.</li>
+                                            <li>Select the <code>Run SVG Analysis</code> toggle to perform spatial analysis (Moran Results)</li>
+                                            <li>Select <code>T-SNE & UMAP</code> toggle.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Process</span> to confirm.</li>
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/NanoString/nano_process.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div> 
+                                        <p>Selecting SVG Analysis and/or T-SNE/UMAP will increase processing time of the sample.</p>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/SVG/svgcutoff_txt.png" id="vis_opt" style="max-width: 100%;">
+                                        </figure>  
+                                        <p><i>p-value threshold for SVG cutoff can be customized. To modify the p-value, go <code>../VR-Omics/Assets/PythonFiles/svgcutoff.txt </code> and set the value between <code>0 to 1</code>. Do this step before you process to <span class="badge badge-pill badge-info">Download</span>.</i></p>                   
+                                        <p>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code> To Visualise the data select the complete folder as shown in the figure</p> 
+                                        <p>After clicking Process, the Python executable will be started. Don't close the pop up windows and wait until the pipeline has finished. This might take a couple of minutes.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+                    <details class="details sub"><summary><strong>Load</strong></summary><a id="nanostring_load"></a>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Navigate to the NanoString load menu</td>
+                                    <td>
+                                        <ol>
+                                            <li>From the main menu select <span class="badge badge-pill badge-info">NanoString</span></li>
+                                            <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/NanoString/nano_general_load.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Select the NanoString sample folder</td>
+                                    <td>
+                                        <ol>
+                                            <li>Select <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Using the explorer select the main folder of the processed NanoString folder.</li>
+                                        </ol>
+                                    </td>
+                                    <td>                                        
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/NanoString/nano_load.png" style="max-width: 100%;">
+                                            </figure> 
+                                            <p>Select the NanoString folder <a href="#nanostring_process">processed</a> with the VR-Omics AW (highlighted in green in the picture) using <span class="badge badge-pill badge-info">Browse</span>.</p>
+                                            <p>The data set can be found in the VR-Omics directory. Navigate from there to <code>VR-Omics/Assets/PythonFiles/sample</code> select the whole folder as shown in the picture</p>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                            </figure>  
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Confirm selection</td>
+                                    <td>
+                                        <p>Click <span class="badge badge-pill badge-info">Visualise</span> to continue to the VR-Omics Visualiser.<p>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/NanoString/nano_load_visualize.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div> 
+                                        <p>Ensure the data has been processed before visualising it using the <a href="#nanostring_process">Process</a> function.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+                </details>
+                <!-- Slide-Seq -->
+                <details class="details"><summary> <span style="font-size: 18px">Slide-SeqV2</span></summary>
+                    <details class="details sub"><summary><strong>Load</strong></summary><a id="slide_load"></a>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            Before visuliasing with VR-Omics, please ensure you have preprocessed your dataset according to the <a href="https://squidpy.readthedocs.io/en/stable/notebooks/tutorials/tutorial_slideseqv2.html">Slide-SeqV2</a> tutorial.                            
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <a id="aw_slide"></a>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Navigate to the Slide-SeqV2 load menu</td>
+                                    <td>
+                                        <ol>
+                                            <li>From the main menu select <span class="badge badge-pill badge-info">Slide-SeqV2</span></li>
+                                            <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Slide-seq/slide_general.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Select the Slide-SeqV2 folder</td>
+                                    <td>
+                                        <ol>
+                                            <li>Select <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Choose the main folder of the Slide-SeqV2 data using the Explorer.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Visualise</span> to confirm</li>
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <div style="width: 600px;">
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Slide-seq/slide_load.png" style="max-width: 100%;">
+                                            </figure> 
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Slide-seq/slide_load_visualise.png" style="max-width: 100%;">
+                                            </figure> 
+                                        </div>                                         
+                                    </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </details>
+                </details>
                 <!-- Custom -->
                 <details  class="details"><summary> <span style="font-size: 18px">Custom data</span></summary>
                     <details class="details sub"><summary><strong>Load</strong></summary><a id="other_load"></a>
@@ -3297,7 +3481,7 @@
     </section>
 
     <footer class="mt-5 py-4 border-top border-secondary">
-        Looking for the VR-Omics legacy page: <button type="button" class="btn btn-secondary"><a href="vromics_legacy.html">VR-Omics v1.0</a></button>
+        VR-Omics legacy versions: <button type="button" class="btn btn-secondary"><a href="https://figshare.com/s/b717041b5beaff929629">VR-Omics v1.0</a></button> <button type="button" class="btn btn-secondary"><a href="https://figshare.com/articles/software/VR-Omics_Exploration_of_Spatial_Transcriptomics_data_in_3D/24503611">VR-Omics v2.0</a></button>
     </footer>
     <!-- Contact Section -->
     <section id="contact" class="section has-img-bg pb-0">
