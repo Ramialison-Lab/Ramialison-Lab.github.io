@@ -65,13 +65,17 @@
         <div class="vromicsv2">
             <div class="overlay">
                 <h1 class="subtitle">Visualisation and Analysis of Spatially Resolved Transcriptomics Data.</h1>
-                <h1 class="title">VR-Omics</h1>  
+                <h1 class="title">VR-Omics</h1> 
+                <div class="nav-button-container" style="text-align: center; margin-top: 20px;">
+                    <a href="#abstract" class="nav-link btn btn-primary btn-sm rounded">Download VR-Omics V3.0</a>
+                </div> 
             </div>
             <div class="shape">
                 <svg viewBox="0 0 1500 200">
                     <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
                 </svg>
             </div>  
+            
             <div class="mouse-icon"><div class="wheel"></div>
         </div>
     </header>
@@ -94,7 +98,7 @@
             <div class="row justify-content-between">
                 <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
                     <h6 class="section-title mb-0">Abstract</h6>
-                    <p>Spatially resolved transcriptomics (SRT) technologies produce complex, multi-dimensional data sets of gene expression information at subcellular levels that enable biologist to systematically investigate spatiotemporal gene expression patterns. However, analysis of SRT data remains broadly underpowered by complexity and lack of adequate software suited to non-computational users. We introduce VR-Omics, a freely available programme for comprehensive analysis, visualisation, and exploration of single or multi-section SRT data generated from a variety of platforms as desktop application or immersive virtual environment. VR-Omics accommodates various SRT technologies, including 10x Genomics' Visium and Xenium, Vizgen's MERFISH, open-source Tomo-seq, and custom SRT data. The system can be implemented as a local 3D desktop application or as an immersive environment in virtual reality using head-mounted display. This allows biologists to interact with the data in novel ways that were previously inaccessible, which includes visually exploring the gene expression patterns of an organ and comparing genes based on their 3D expression profiles.
+                    <p>The field of spatial transcriptomics is rapidly evolving, with increasing sample complexity, resolution, and tissue size. Yet the field lacks comprehensive solutions for automated integration and analysis of multi-slice data in either stacked (3D) or co-planar (2D) formation. To address this, we developed VR-Omics, a free, platform-agnostic software that provides end-to-end automated processing of multi-slice data through a biologist-friendly interface. Benchmarking against existing methods demonstrates VR-Omics’ unique strengths to perform comprehensive end-to-end analysis of multi-slice stacked data. Through co-planar slice analysis, VR-Omics uncovered previously undetected, dysregulated metabolic networks within rare paediatric cardiac rhabdomyomas, demonstrating its potential for biological discoveries.
                     </p>
                         <a href="https://widgets.figshare.com/articles/28259834/embed?show_title=1" class="nav-link btn btn-primary btn-sm rounded d-block mb-3 ml-4">Download VR-Omics for Windows 64-bit</a>
                         
@@ -124,6 +128,8 @@
                     <a class="dropdown-item" href="#aw_tomo" onclick="openDetails('aw_tomo')">Tomo-Seq</a>
                     <a class="dropdown-item" href="#aw_stomics" onclick="openDetails('aw_stomics')">STOmics</a>
                     <a class="dropdown-item" href="#aw_merfish" onclick="openDetails('aw_merfish')">MERFISH</a>
+                    <a class="dropdown-item" href="#aw_nanostring" onclick="openDetails('aw_nanostring')">NanoString</a>
+                    <a class="dropdown-item" href="#aw_slide" onclick="openDetails('aw_slide')">Slide-SeqV2</a>
                     <a class="dropdown-item" href="#aw_other" onclick="openDetails('aw_other')">Custom data</a>
                 </div>
             </div>            
@@ -161,12 +167,6 @@
             <details>
                 <summary><span style="font-size: 24px">VR-Omics Setup (Windows)</span></summary>
                 <br>
-                <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                    Available for Windows 10 only
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                       <span aria-hidden="true">&times;</span>
-                    </button>
-                 </div>
                 <table class="table table-striped">
                     <tbody>
                         <tr>
@@ -257,7 +257,7 @@
                             </td>
                             <td>
                                 <div style="width: 600px;">
-                                    <img src="../assets/imgs/Documentation/Setup/download_vromics.png" id="vis_opt" style="max-width: 100%;">
+                                    <img src="../assets/imgs/Documentation/Setup/download_mac.png" id="vis_opt" style="max-width: 100%;">
                                 </div>
                             </td>
                         </tr>
@@ -317,7 +317,7 @@
                                             </ol>
                                         </td>
                                         <td>
-                                            <div style="width: 600px;">
+                                            <div>
                                                 <figure>
                                                     <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_options.png" id="vis_opt" style="max-width: 100%;">
                                                     <figcaption>VR-Omics main menu.</figcaption>
@@ -337,7 +337,7 @@
                                             </ol>
                                         </td>
                                         <td>
-                                            <div style="width: 600px;">
+                                            <div>
                                                 <figure>
                                                     <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_Download.png" id="vis_opt" style="max-width: 100%;">
                                                     <figcaption><a href="#filter">Filter parameters.</a></figcaption>
@@ -424,7 +424,7 @@
                                             </ol>
                                         </td>
                                         <td>
-                                            <div style="width: 600px;">
+                                            <div>
                                                 <figure>
                                                     <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single.png" style="max-width: 100%;">
                                                     <figcaption>Select the main folder of the processed Visium sample.</figcaption>
@@ -448,7 +448,7 @@
                                             </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single_container.png" style="max-width: 100%;">
                                             </figure>  
@@ -469,7 +469,7 @@
                                             </ol>                                        
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_single_rotate.png" style="max-width: 100%;">
                                             </figure>  
@@ -518,7 +518,7 @@
                                             
                                         </td>
                                         <td>
-                                            <div style="width: 600px;">
+                                            <div>
                                                 <figure>
                                                     <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_selected.png" style="max-width: 100%;">
                                                 </figure>  
@@ -541,7 +541,7 @@
                                             </ol>
                                     </td>
                                         <td>
-                                            <div style="width: 600px;">
+                                            <div>
                                                 <figure>
                                                     <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_containers.png" style="max-width: 100%;">
                                                 </figure>  
@@ -562,7 +562,7 @@
                                             </ol>                                                                                    
                                     </td>
                                         <td>
-                                            <div style="width: 600px;">
+                                            <div>
                                                 <figure>
                                                     <img src="../assets/imgs/Documentation/Visium_and_C18/vis_load_multiple_rotate_showall.png" style="max-width: 100%;">
                                                 </figure>  
@@ -666,8 +666,8 @@
                     <details class="details sub"><summary><strong>Concat</strong></summary><a id="visium_concat"></a>
                         <table class="table table-striped">
                             <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                                Stop: Make sure the sample is <a href="#visium_process">raw</a> for concat function!
-                                And select multiple slides from <a href="#visium_process">the same sample</a> only!
+                                Stop: Make sure the sample is RAW for concat function!
+                                And select multiple slides from THE SAME SAMPLE only!
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                    <span aria-hidden="true">&times;</span>
                                 </button>
@@ -683,7 +683,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_options_concat.png" style="max-width: 100%;">
                                             </figure> 
@@ -694,10 +694,12 @@
                                     <th scope="row">2</th>
                                     <td>Select datasets to be aligned</td>
                                     <td>
-                                        <li>Click <span class="badge badge-pill badge-info">Browse</span> and select multiple datasets (folder) from your local machine.</li>
+                                        <ol>
+                                            <li>Click <span class="badge badge-pill badge-info">Browse</span> and select multiple datasets (folder) from your local machine.</li>
+                                        </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_concat_browse.png" style="max-width: 100%;">
                                             </figure> 
@@ -982,7 +984,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Xenium/xenium_options.png" style="max-width: 100%;">
                                             </figure> 
@@ -1003,7 +1005,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Xenium/xenium_process.png" style="max-width: 100%;">
                                             </figure> 
@@ -1084,6 +1086,127 @@
                             </tbody>
                         </table>
                     </details>
+
+                    <!-- Load multiple Xenium slides in 3D space -->
+                    <details class="details sub"><summary><strong>Loading multiple Xenium in 3D</strong></summary><a id="xenium_load_multiple"></a>
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            Stop: Make sure the sample has been <a href="#visium_process">processed</a> using the VR-Omics automated workflow before loading the slide!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <br>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Load multiple Xenium datasets in 3D</td>
+                                    <td>
+                                        <ol>
+                                            <li>From the main menu select <span class="badge badge-pill badge-info">Xenium</span></li>
+                                            <li>Select <span class="badge badge-pill badge-info">Load</span></li> 
+                                        </ol>
+                                    </td>
+                                    <td>
+                                        <figure>
+                                            <img src="../assets/imgs/Documentation/Xenium/xenium_3d_load.png" style="max-width: 100%;">
+                                        </figure>  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Select sample folders</td>
+                                    <!-- TODO: add example data path -->
+                                    <td>
+                                        <ol>
+                                            <li>Click <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Using the explorer select the main folders of the samples to load.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Load</span> to confirm selection.</li>
+                                        </ol>
+                                        
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Xenium/xenium_3d_browse.png" style="max-width: 100%;">
+                                            </figure>  
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Xenium/xenium_output.png" style="max-width: 100%;">
+                                                <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
+                                            </figure>  
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Confirm selection</td>
+                                    <td>
+                                        <ol>
+                                            <li>Tissue images can be expanded.</li>
+                                            <li>Change the order of the samples using <span class="badge badge-pill badge-info">˄</span> or <span class="badge badge-pill badge-info">˅</span>.</li>
+                                            <li>Remove samples by clicking <span class="badge badge-pill badge-info">🗑</span></li>
+                                            <li>Confirm selection and order by clicking <span class="badge badge-pill badge-info">Align</span></li>
+                                        </ol>
+                                </td>
+                                    <td>
+                                        <div>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Xenium/xenium_3d_align.png" style="max-width: 100%;">
+                                            </figure>  
+                                        </div> 
+                                        <p>If the tissue image wasn't found a default VR-Omics placeholder will appear. To fix this, please ensure that the respective file is named <code>tissue_hires_image.png</code>in the directory.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Rotate the samples in the 3D mapping tool</td>
+                                    <td>
+                                        <ol>
+                                            <li>Select a sample from the dropdown menu.</li>
+                                            <li>Adjust transparency using the slider for the selected tissue image.</li>
+                                            <li>Rotate the sample with the <span class="badge badge-pill badge-info">+</span> or <span class="badge badge-pill badge-info">-</span> buttons.</li>
+                                            <li>Enter slide distances separated by commas.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Go!</span> to visualize the combined dataset in the VR-Omics Visualizer.</li>
+                                        </ol>                                                                                    
+                                </td>
+                                    <td>
+                                        <div>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Xenium/xenium_3d_mapping.png" style="max-width: 100%;">
+                                            </figure>  
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Load the 3D dataset</td>
+                                    <td>
+                                        <ol>
+                                            <li>The processed 3D dataset is saved to your local machine, to visualise it, repeat the <span class="badge badge-pill badge-info">Load</span> section</li>
+                                            <li>From the main menu, select <span class="badge badge-pill badge-info">MERFISH</span></li>
+                                            <li>Select <span class="badge badge-pill badge-info">Load</span></li>
+                                        </ol>
+                                        
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Xenium/xenium_load.png" style="max-width: 100%;">
+                                            </figure>  
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Xenium/xenium_output.png" style="max-width: 100%;">
+                                                <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
+                                            </figure>  
+                                        </div> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+
+
+
+
                 </details>
                 <!-- Tomo-Seq -->
                 <details class="details"><summary> <span style="font-size: 18px">Tomo-Seq</span></summary>
@@ -1175,7 +1298,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Stomics/stomics_options.png" style="max-width: 100%;">
                                             </figure> 
@@ -1189,9 +1312,9 @@
                                         <p>Select the gene expression matrix <code>.gef</code> file of the STOmics data using <span class="badge badge-pill badge-info">Browse</span>.
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Stomics/stomics_process.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Stomics/stomics_browse.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
                                         <p>The dataset can be downloaded from <a href="https://db.cngb.org/stomics">STOmics Database.</a></p>
@@ -1205,7 +1328,7 @@
                                         <p>The processed data will be saved locally.</p>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Stomics/stomics_process.png" style="max-width: 100%;">
                                             </figure> 
@@ -1234,9 +1357,9 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Stomics/stomics_load.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Stomics/stomics_browse.png" style="max-width: 100%;">
                                             </figure> 
                                         </div> 
                                     </td>
@@ -1248,7 +1371,7 @@
                                         <p>Select the processed gene expression STOmics <code>.h5</code> file using <span class="badge badge-pill badge-info">Browse</span>.
                                 </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Stomics/stomics_load.png" style="max-width: 100%;">
                                             </figure> 
@@ -1280,7 +1403,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Merfish/merfish_options_process.png" style="max-width: 100%;">
                                             </figure> 
@@ -1302,7 +1425,7 @@
                                         </ol>
                                 </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Merfish/merfish_process.png" style="max-width: 100%;">
                                             </figure> 
@@ -1335,7 +1458,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Merfish/merfish_options_load.png" style="max-width: 100%;">
                                             </figure> 
@@ -1353,13 +1476,13 @@
                                         </ol>
                                 </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Merfish/merfish_load.png" style="max-width: 100%;">
                                             </figure> 
                                             <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_output.png" style="max-width: 100%;">
                                             </figure>   
                                         </div> 
                                         <p>The MERFISH data used was provided by <a href="vizgen.com">Vizgen</a> where there data is publicly available under their <a href="vizgen.com/data-release-program/">data release program.</a></p>
@@ -1382,7 +1505,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Merfish/Merfish_options_Merge3D.png" style="max-width: 100%;">
                                             </figure> 
@@ -1391,25 +1514,88 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
-                                    <td>Select the MERFISH files</td>
+                                    <td>Select sample folders</td>
                                     <td>
                                         <ol>
-                                            <li>Select <span class="badge badge-pill badge-info">Browse</span></li>
-                                            <li>Select the MERFISH sample folder processed using the VR-Omics AW</li>
-                                            <li>Select <span class="badge badge-pill badge-info">Visualise</span> to confirm.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Browse</span></li>
+                                            <li>Using the explorer select the main folders of the samples to load.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Load</span> to confirm selection.</li>
+                                        </ol>
+                                        
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_3d_browse.png" style="max-width: 100%;">
+                                            </figure>  
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_output.png" style="max-width: 100%;">
+                                                <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
+                                            </figure>  
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Confirm selection</td>
+                                    <td>
+                                        <ol>
+                                            <li>Tissue images can be expanded.</li>
+                                            <li>Change the order of the samples using <span class="badge badge-pill badge-info">˄</span> or <span class="badge badge-pill badge-info">˅</span>.</li>
+                                            <li>Remove samples by clicking <span class="badge badge-pill badge-info">🗑</span></li>
+                                            <li>Confirm selection and order by clicking <span class="badge badge-pill badge-info">Align</span></li>
                                         </ol>
                                 </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
-                                                <img src="../assets/imgs/Documentation/Merfish/merfish_load.png" style="max-width: 100%;">
-                                            </figure> 
-                                            <p>The processed data can be found in the VR-Omics data folder. To Visualise the data select the complete folder as shown in the figure <code>../VR-Omics/Assets/PythonFiles/sample/</code></p>
-                                            <figure>
-                                                <img src="../assets/imgs/Documentation/VR_Omics_datapaths.png" style="max-width: 100%;">
-                                            </figure>   
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_3d_align.png" style="max-width: 100%;">
+                                            </figure>  
                                         </div> 
-                                        <p>The MERFISH data used was provided by <a href="vizgen.com">Vizgen</a> where there data is publicly available under their <a href="vizgen.com/data-release-program/">data release program.</a></p>
+                                        <p>If the tissue image wasn't found a default VR-Omics placeholder will appear. Please ignore if the respective file is named <code>tissue_hires_image.png</code>in the directory.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Rotate the samples in the 3D mapping tool</td>
+                                    <td>
+                                        <ol>
+                                            <li>Select a sample from the dropdown menu.</li>
+                                            <li>Adjust transparency using the slider for the selected tissue image.</li>
+                                            <li>Rotate the sample with the <span class="badge badge-pill badge-info">+</span> or <span class="badge badge-pill badge-info">-</span> buttons.</li>
+                                            <li>Enter slide distances separated by commas.</li>
+                                            <li>Click <span class="badge badge-pill badge-info">Go!</span> to visualize the combined dataset in the VR-Omics Visualizer.</li>
+                                        </ol>                                                                                    
+                                </td>
+                                    <td>
+                                        <div>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_3d_mapping.png" style="max-width: 100%;">
+                                            </figure>  
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Load the 3D dataset</td>
+                                    <td>
+                                        <ol>
+                                            <li>The processed 3D dataset is saved to your local machine, to visualise it, repeat the <span class="badge badge-pill badge-info">Load</span> section</li>
+                                            <li>From the main menu, select <span class="badge badge-pill badge-info">MERFISH</span></li>
+                                            <li>Select <span class="badge badge-pill badge-info">Load</span></li>
+                                        </ol>
+                                        
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_options_load.png" style="max-width: 100%;">
+                                            </figure>  
+                                            <figure>
+                                                <img src="../assets/imgs/Documentation/Merfish/merfish_output.png" style="max-width: 100%;">
+                                                <figcaption>The samples processed using the VR-Omics workflow are stored in the VR-Omics application folder on your local machine. <code>../VR-Omics/Assets/PythonFiles/sample/</code></figcaption>
+                                            </figure>  
+                                        </div> 
                                     </td>
                                 </tr>
                             </tbody>
@@ -1433,7 +1619,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/NanoString/nano_general.png" style="max-width: 100%;">
                                             </figure> 
@@ -1456,7 +1642,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/NanoString/nano_process.png" style="max-width: 100%;">
                                             </figure> 
@@ -1489,7 +1675,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/NanoString/nano_general_load.png" style="max-width: 100%;">
                                             </figure> 
@@ -1506,7 +1692,7 @@
                                         </ol>
                                     </td>
                                     <td>                                        
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/NanoString/nano_load.png" style="max-width: 100%;">
                                             </figure> 
@@ -1525,7 +1711,7 @@
                                         <p>Click <span class="badge badge-pill badge-info">Visualise</span> to continue to the VR-Omics Visualiser.<p>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/NanoString/nano_load_visualize.png" style="max-width: 100%;">
                                             </figure> 
@@ -1559,7 +1745,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Slide-seq/slide_general.png" style="max-width: 100%;">
                                             </figure> 
@@ -1577,7 +1763,7 @@
                                         </ol>
                                     </td>
                                     <td>
-                                        <div style="width: 600px;">
+                                        <div>
                                             <figure>
                                                 <img src="../assets/imgs/Documentation/Slide-seq/slide_load.png" style="max-width: 100%;">
                                             </figure> 
@@ -1590,6 +1776,84 @@
                                
                             </tbody>
                         </table>
+                    </details>
+                     <!-- Folder required format -->
+                     <details class="details sub"><summary>Required Folder Format for samples processed with Slide-SeqV2</summary>
+                        <a id="format"></a>
+                        <p>For samples processed with Slide-SeqV2 workflow, please ensure this folder structure. Further descriptions of the files can be found below.
+                            <img src="../assets/imgs/Documentation/Visium_and_C18/Vis_file_format.png" alt="" class="w-100 shadow-sm">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Required file name ending</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        <code>CellComposite</code>
+                                    </td>
+                                    <td>
+                                        A folder consists cell composite <code>.jpg</code> images.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>CellLabels</code>
+                                    </td>
+                                    <td>
+                                        A folder consists cell labelling <code>.tif</code> images.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>CellOverlay</code>
+                                    </td>
+                                    <td>
+                                        A folder consists cell overlaying <code>.jpg</code> images.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>CompartmentLabels</code>
+                                    </td>
+                                    <td>
+                                        A folder consists cell compartment labelling <code>.tif</code> images.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>exprMAt_file.csv</code>
+                                    </td>
+                                    <td>
+                                        Header: <code>in_tissue</code>, <code>array_row</code>, <code>array_col</code>, <code>n_genes_by_counts</code>, <code>log1p_n_genes_by_counts</code>, <code>total_counts</code>, <code>log1p_total_counts</code>, <code>pct_counts_in_top_50_genes</code>, <code>pct_counts_in_top_100_genes</code>, <code>pct_counts_in_top_200_genes</code>, <code>pct_counts_in_top_500_genes</code>, <code>total_counts_mt</code>, <code>log1p_total_counts_mt</code>, <code>pct_counts_mt</code>, <code>n_counts</code>, <code>n_genes</code>, <code>clusters</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>fov_positions_file.csv</code>
+                                    </td>
+                                    <td>
+                                        CSV file with <code>x</code> and <code>y</code> pixel positions for all genes in the dataset.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>metadata_file.csv</code>
+                                    </td>
+                                    <td>
+                                        CSV file with one column header name <code>gene</code> listing all gene names in the dataset.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>tx_file.csv</code>
+                                    </td>
+                                    <td>
+                                        CSV file includes gene ID, length, and other related spatial transcript information about the data.
+                                    </td>
+                                </tr>
+                            </table>
                     </details>
                 </details>
                 <!-- Custom -->
